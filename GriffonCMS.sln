@@ -27,7 +27,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{01A1757A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{23032E84-1265-4250-A3EA-CF1F1B283940}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GriffonCMS.Core", "GriffonCMS.Core\GriffonCMS.Core.csproj", "{22306C46-7293-4033-AFCB-2BC5AABD6257}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GriffonCMS.Core", "GriffonCMS\Business\GriffonCMS.Core\GriffonCMS.Core.csproj", "{22306C46-7293-4033-AFCB-2BC5AABD6257}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GriffonCMS", "GriffonCMS", "{4DE869A7-A900-4720-8636-8B539B52357C}"
 EndProject

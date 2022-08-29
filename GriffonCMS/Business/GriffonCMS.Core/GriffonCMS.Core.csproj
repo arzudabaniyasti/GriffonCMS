@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GriffonCMS\Business\GriffonCMS.Domain\GriffonCMS.Domain.csproj" />
+    <ProjectReference Include="..\GriffonCMS.Domain\GriffonCMS.Domain.csproj" />
   </ItemGroup>
 
 </Project>

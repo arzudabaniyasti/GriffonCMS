@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\GriffonCMS.Core\GriffonCMS.Core.csproj" />
+    <ProjectReference Include="..\GriffonCMS.Core\GriffonCMS.Core.csproj" />
     <ProjectReference Include="..\GriffonCMS.Domain\GriffonCMS.Domain.csproj" />
   </ItemGroup>
 
