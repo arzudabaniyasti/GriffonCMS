@@ -19,7 +19,8 @@ builder.Services.AddMediatR(typeof(MediatRAssemblyReference).Assembly);
 
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
-builder.Services.Configure<GriffonEFContextOptions>(options => builder.Configuration.GetConnectionString("GriffonSQLServer"));
+// Example Options
+//builder.Services.Configure<GriffonEFContextOptions>(options => builder.Configuration.GetConnectionString("GriffonSQLServer"));
 
 builder.Services.AddDbContext<GriffonEFContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("GriffonSQLServer")));
 
