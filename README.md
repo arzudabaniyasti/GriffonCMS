@@ -9,6 +9,7 @@ dotnet build
 ---
 ## Setup Database
 **Package Manager Console:**
+> Run inside **GriffonCMS\Business\GriffonCMS.Core** project
 ```
 EntityFrameworkCore\Update-Database
 ```
@@ -20,6 +21,7 @@ dotnet ef database update
 ---
 ## Add Migration
 **Package Manager Console:**
+> Run inside **GriffonCMS\Business\GriffonCMS.Core** project
 ```
 EntityFrameworkCore\add-migration [migrationName]
 ```
