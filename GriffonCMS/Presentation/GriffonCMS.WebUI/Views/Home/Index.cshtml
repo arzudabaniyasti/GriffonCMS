@@ -1,8 +1,41 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<!DOCTYPE html>
+<head>
+	<title>Arzu | Home</title>
+</head>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- HOME -->
+<body>
+<div><img class="shane_tm_fixed_image" src="~/images/about/1.jpg" alt="" /></div>
+<div id="home" class="shane_tm_section active">
+	<div class="shane_tm_home">
+		<div class="content">
+			<div class="image">
+				<div><img class="main" src="~/images/about/1.jpg" alt="" /></div>
+			</div>
+			<h3 class="name">Martin <span class="coloring">Peterson</span></h3>
+			<div class="shane_tm_animate_text">
+				<span class="cd-headline zoom">
+					<!-- ANIMATE TEXT VALUES: zoom, rotate-1, letters type, letters rotate-2, loading-bar, slide, clip, letters rotate-3, letters scale, push,  -->
+					<span class="blc">I'm a</span>
+					<span class="cd-words-wrapper">
+						<b class="is-visible">developer</b>
+						<b>freelancer</b>
+						<b>designer</b>
+					</span>
+				</span>
+			</div>
+			<div class="shane_tm_button">
+				<a href="~/images/resume/resume.jpg"><span>Download CV</span></a>
+			</div>
+		</div>
+	</div>
 </div>
+</body>
+
+<!-- /HOME -->
+
