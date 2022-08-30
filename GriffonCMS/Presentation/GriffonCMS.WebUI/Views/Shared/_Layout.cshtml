@@ -1,49 +1,121 @@
-﻿<!DOCTYPE html>
+﻿@{
+	Layout = null;
+}
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - GriffonCMS.WebUI</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/GriffonCMS.WebUI.styles.css" asp-append-version="true" />
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">GriffonCMS.WebUI</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+<!--<![endif]-->
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - GriffonCMS.WebUI - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<meta name="description" content="Name of your web site">
+	<meta name="author" content="Marketify">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+	<!-- STYLES -->
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+
+	<link rel="stylesheet" type="text/css" href="~/css/plugins.css" />
+	<link rel="stylesheet" type="text/css" href="~/css/rtl.css" />
+	<link rel="stylesheet" type="text/css" href="~/css/colors.css" />
+	<link rel="stylesheet" type="text/css" href="~/css/darkMode.css" />
+	<link rel="stylesheet" type="text/css" href="~/css/onePage.css" />
+	<link rel="stylesheet" type="text/css" href="~/css/elements.css" />
+	<link rel="stylesheet" type="text/css" href="~/css/style.css" />
+	<!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js"></script> <![endif]-->
+	<!-- /STYLES -->
+
+</head>
+
+<body>
+	<!-- DARK MODE: add class "dark" Example: <body class="dark"> RTL MODE: add class "rtl" Example: <body class="rtl"> -->
+
+	<div class="shane_tm_preloader">
+		<div class="spinner_wrap">
+			<div class="spinner"></div>
+		</div>
+	</div>
+
+
+	<!-- WRAPPER ALL -->
+	<div class="shane_tm_all_wrap" data-magic-cursor="show" data-color="crimson" data-menu-position="" data-menu-style="">
+
+		<!-- "" is default option -->
+		<!-- MAGIC CURSOR VALUES: "", hide -->
+		<!-- COLOR VALUES: blue, green, brown, pink, orange, black, white, purple, sky, cadetBlue, crimson, olive, red -->
+		<!-- MENU POSITION VALUES: leftCenter, topLeft1, topLeft2, leftBottom1, leftBottom2, center, sidebar -->
+		<!-- MENU STYLE VALUES: "", inline -->
+		<!-- MENU -->
+		<div class="shane_tm_menu">
+			<ul>
+				<li>
+					<a href="@Url.Action("Index","Home")">
+						<img class="svg" src="~/images/svg/home-run.svg" alt="" />
+						<span>Home</span>
+					</a>
+				</li>
+				<li>
+					<a href="@Url.Action("About","About")">
+						<img class="svg" src="~/images/svg/avatar.svg" alt="" />
+						<span>About</span>
+					</a>
+				</li>
+				<li>
+					<a href="@Url.Action("Resume","Resume")">
+						<img class="svg" src="~/images/svg/document.svg" alt="" />
+						<span>Resume</span>
+					</a>
+				</li>
+				<li>
+					<a href="@Url.Action("Works","Works")">
+						<img class="svg" src="~/images/svg/briefcase.svg" alt="" />
+						<span>Works</span>
+					</a>
+				</li>
+				<li>
+					<a href="@Url.Action("News","News")">
+						<img class="svg" src="~/images/svg/paper.svg" alt="" />
+						<span>News</span>
+					</a>
+				</li>
+				<li>
+					<a href="@Url.Action("Contact","Contact")">
+						<img class="svg" src="~/images/svg/mail.svg" alt="" />
+						<span>Contact</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- /MENU -->
+		<div><img class="shane_tm_fixed_image" src="~/images/about/1.jpg" alt="" /></div>
+
+		<!-- /MENU -->
+		<!-- CURSOR -->
+		<div class="mouse-cursor cursor-outer"></div>
+		<div class="mouse-cursor cursor-inner"></div>
+		<!-- /CURSOR -->
+		@RenderBody();
+	</div>
+	<!-- / WRAPPER ALL -->
+	<!-- SCRIPTS -->
+	<script src="~/js/jquery.js"></script>
+	<!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->
+	<script src="~/js/plugins.js"></script>
+	<script src="~/js/elements.js"></script>
+	<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5bpEs3xlB8vhxNFErwoo3MXR64uavf6Y&callback=initMap"></script>
+	<script src="~/js/init.js"></script>
+	<!-- /SCRIPTS -->
+
 </body>
 </html>

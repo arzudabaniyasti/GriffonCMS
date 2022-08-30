@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<head>
+	<title>Arzu | Contact</title>
+</head>
+<!-- /CONTACT -->
+<body>
+<div id="contact" class="shane_tm_section active">
+	<div class="shane_tm_contact">
+		<div class="shane_tm_main_title">
+			<h3>Get in <span class="coloring">Touch</span></h3>
+		</div>
+		<div class="short_info">
+			<ul>
+				<li>
+					<div class="list_inner">
+						<img class="svg" src="~/images/svg/pin.svg" alt="" />
+						<span>Ave 11, New York, USA</span>
+					</div>
+				</li>
+				<li>
+					<div class="list_inner">
+						<img class="svg" src="~/images/svg/call.svg" alt="" />
+						<span>+77 442 55 57</span>
+					</div>
+				</li>
+				<li>
+					<div class="list_inner">
+						<img class="svg" src="~/images/svg/email.svg" alt="" />
+						<span>hello@gmail.com</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="contact_inner">
+			<div class="wrapper">
+				<div class="left">
+					<div class="fields">
+						<form action="/" method="post" class="contact_form" id="contact_form" autocomplete="off">
+							<div class="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
+							<div class="empty_notice"><span>Please Fill Required Fields</span></div>
+							<div class="first">
+								<ul>
+									<li>
+										<input id="name" type="text" placeholder="Name">
+									</li>
+									<li>
+										<input id="email" type="text" placeholder="Email">
+									</li>
+								</ul>
+							</div>
+							<div class="last">
+								<textarea id="message" placeholder="Message"></textarea>
+							</div>
+							<div class="shane_tm_button">
+								<a id="send_message" href="#"><span>Send Message</span></a>
+							</div>
+
+							<!-- PS: If you want to change mail address to yours, please open modal.php and go to line 4 -->
+
+						</form>
+					</div>
+				</div>
+				<div class="right">
+					<div class="map_wrap">
+						<div class="map" id="ieatmaps"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<!-- /CONTACT -->
+
