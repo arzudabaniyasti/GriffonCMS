@@ -1,0 +1,155 @@
+/*======= Posts =======*/
+.post-area {
+    position: relative;
+    margin-top: 80px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+
+    &.with-sidebar {
+        .post-area-inner {
+            display: grid;
+            grid-template-columns: 1fr minmax(300px, 300px);
+            grid-gap: 150px;
+
+            position: relative;
+
+            @media (max-width: 1400px) {
+                grid-gap: 100px;
+            }
+
+            @include respond-below(md) {
+                display: block;
+            }
+        }
+    }
+}
+
+.entry-posts {
+    padding-top: 70px;
+    padding-bottom: 100px;
+
+    &.row {
+        margin-left: -35px;
+        margin-right: -35px;
+
+        @media (max-width: 1600px) {
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+
+        &>.col,
+        &>[class*=col-] {
+            padding-right: 35px;
+            padding-left: 35px;
+
+            @media (max-width: 1600px) {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+
+    .entry-post {
+        margin-bottom: 90px;
+
+        @include respond-below(lg) {
+            margin-bottom: 50px;
+        }
+
+        @include respond-below(xs) {
+            margin-bottom: 40px;
+        }
+
+        .entry-thumbnail {
+            margin-bottom: 40px;
+        }
+
+        .entry-content {
+            padding-right: 30px;
+        }
+
+        .title {
+            font-size: 25px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            font-weight: 800;
+
+            @media (max-width: 1600px) {
+                font-size: 20px;
+            }
+        }
+
+        .post-meta {
+            font-size: 13px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+
+            a {
+                color: $text-color;
+
+                &:hover {
+                    color: $black;
+                }
+            }
+
+            li {
+                &:not(:last-child) {
+                    margin-right: 20px;
+                    padding-right: 20px;
+                    position: relative;
+
+                    @include respond-below(sm) {
+                        padding-right: 10px;
+                        margin-right: 10px;
+                    }
+
+                    &::after {
+                        content: "/";
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        .read-more {
+            font-size: 14px;
+            font-family: $rob_s;
+            font-weight: 700;
+            line-height: 1;
+            margin-top: 30px;
+
+            i {
+                margin-left: 10px;
+                position: relative;
+            }
+
+            &:hover {
+                opacity: 0.8;
+                padding-left: 8px;
+            }
+        }
+    }
+}
+
+.load-more-btn {
+    background-color: $black;
+    line-height: 1;
+    color: $white;
+    padding: 20px 45px;
+    font-weight: 600;
+    font-family: $rob_s;
+    font-size: 15px;
+    border: 1px solid $black;
+
+    &:hover {
+        background-color: $white;
+    }
+}

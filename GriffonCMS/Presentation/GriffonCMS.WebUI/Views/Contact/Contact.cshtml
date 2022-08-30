@@ -1,79 +1,56 @@
 ﻿
 @{
     ViewData["Title"] = "Contact";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_PersonalBlogLayout.cshtml";
 }
 <!DOCTYPE html>
 <head>
-	<title>Arzu | Contact</title>
+	<title>Contact</title>
 </head>
 <!-- /CONTACT -->
-<body>
-<div id="contact" class="shane_tm_section active">
-	<div class="shane_tm_contact">
-		<div class="shane_tm_main_title">
-			<h3>Get in <span class="coloring">Touch</span></h3>
-		</div>
-		<div class="short_info">
-			<ul>
-				<li>
-					<div class="list_inner">
-						<img class="svg" src="~/images/svg/pin.svg" alt="" />
-						<span>Ave 11, New York, USA</span>
-					</div>
-				</li>
-				<li>
-					<div class="list_inner">
-						<img class="svg" src="~/images/svg/call.svg" alt="" />
-						<span>+77 442 55 57</span>
-					</div>
-				</li>
-				<li>
-					<div class="list_inner">
-						<img class="svg" src="~/images/svg/email.svg" alt="" />
-						<span>hello@gmail.com</span>
-					</div>
-				</li>
-			</ul>
-		</div>
-		<div class="contact_inner">
-			<div class="wrapper">
-				<div class="left">
-					<div class="fields">
-						<form action="/" method="post" class="contact_form" id="contact_form" autocomplete="off">
-							<div class="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
-							<div class="empty_notice"><span>Please Fill Required Fields</span></div>
-							<div class="first">
-								<ul>
-									<li>
-										<input id="name" type="text" placeholder="Name">
-									</li>
-									<li>
-										<input id="email" type="text" placeholder="Email">
-									</li>
-								</ul>
-							</div>
-							<div class="last">
-								<textarea id="message" placeholder="Message"></textarea>
-							</div>
-							<div class="shane_tm_button">
-								<a id="send_message" href="#"><span>Send Message</span></a>
-							</div>
-
-							<!-- PS: If you want to change mail address to yours, please open modal.php and go to line 4 -->
-
-						</form>
-					</div>
-				</div>
-				<div class="right">
-					<div class="map_wrap">
-						<div class="map" id="ieatmaps"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-</body>
+<!--====== Contact Section Start ======-->
+<section class="contact-section">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-6 col-md-10">
+                <div class="contact-maps">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d619.6468102506822!2d-71.1190028714042!3d42.37335226389641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1605606768371!5m2!1sen!2sus"
+                            allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-10">
+                <div class="contact-text">
+                    <h4 class="title">
+                        If you would like to join us on our journey around the world and beyond, then you can follow
+                        us on a social media channels
+                    </h4>
+                    <div class="infomations">
+                        <h4 class="title">Have a question ?</h4>
+                        <p>Contact us at : <span>example@mail.com</span></p>
+                    </div>
+                    <div class="contact-form">
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <input type="text" placeholder="Name*">
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="email" placeholder="Email*">
+                                </div>
+                                <div class="col-12">
+                                    <textarea placeholder="Your message"></textarea>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--====== Comtact Section End ======-->
 <!-- /CONTACT -->
 

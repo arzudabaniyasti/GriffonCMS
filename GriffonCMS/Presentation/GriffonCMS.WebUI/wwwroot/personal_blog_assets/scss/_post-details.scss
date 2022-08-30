@@ -1,0 +1,444 @@
+/*======= Post Details =======*/
+.post-details-area {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.post-details {
+
+    .entry-header {
+        margin-bottom: 60px;
+        text-align: center;
+
+        .title {
+            font-size: 48px;
+            font-family: $rob_s;
+            font-weight: 700;
+            line-height: 1.556;
+            margin-bottom: 60px;
+
+            @include respond-below(lg) {
+                font-size: 38px;
+            }
+
+            @include respond-below(md) {
+                font-size: 32px;
+            }
+
+            @include respond-below(sm) {
+                font-size: 28px;
+            }
+
+            @include respond-below(xs) {
+                font-size: 24px;
+            }
+        }
+
+        .post-meta {
+            max-width: 420px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 60px;
+
+            li {
+                font-size: 14px;
+                line-height: 1;
+
+                &,
+                a {
+                    color: #646464;
+                }
+
+                a {
+                    margin: 0 5px;
+
+                    &:hover {
+                        color: $black;
+                    }
+                }
+
+                &:not(:last-child) {
+                    padding-bottom: 20px;
+                    margin-bottom: 20px;
+                    border-bottom: 1px solid #dddddd;
+                }
+            }
+        }
+
+        .short-desc {
+            font-weight: 500;
+            padding: 0 80px;
+            font-size: 16px;
+            line-height: 1.6;
+
+            @include respond-below(md) {
+                padding: 0 30px;
+            }
+
+            @include respond-below(sm) {
+                padding: 0;
+            }
+        }
+    }
+
+    .entry-content {
+        padding: 60px 80px;
+        font-size: 16px;
+        line-height: 1.6;
+
+        @include respond-below(md) {
+            padding: 60px 30px;
+        }
+
+        @include respond-below(xs) {
+            padding: 40px 15px;
+        }
+
+        .has-dropcap:first-letter {
+            font-size: 48px;
+            line-height: 1;
+        }
+
+        p:not(:last-child) {
+            margin-bottom: 50px;
+        }
+    }
+
+    .entry-footer {
+        padding: 45px 80px 0;
+        text-align: center;
+
+        @include respond-below(md) {
+            padding: 45px 40px 0;
+        }
+
+        @include respond-below(xs) {
+            padding: 30px 15px 0;
+        }
+
+        .post-tags,
+        .social-share {
+            span {
+                font-size: 16px;
+                font-weight: 700;
+                font-family: $rob_s;
+                margin-right: 20px;
+
+                @include respond-below(xs) {
+                    margin-right: 10px;
+                }
+            }
+
+            a {
+                color: #5a5959;
+                font-size: 14px;
+                margin: 0 2px;
+
+                &:hover {
+                    color: $black;
+                }
+            }
+        }
+
+        .social-share {
+            border-top: 1px solid #e5e5e5;
+            padding-top: 20px;
+            margin-top: 20px;
+
+            a {
+                color: $black;
+                margin: 0 4px;
+            }
+        }
+
+        .post-author {
+            max-width: 385px;
+            margin: 60px auto;
+
+            .author-img {
+                margin-bottom: 15px;
+
+                img {
+                    width: 75px;
+                    height: 75px;
+                    border-radius: 50%;
+                }
+            }
+
+            h5 {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .post-nav {
+        padding: 25px 100px;
+        margin: 0 80px;
+        border-top: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include respond-below(md) {
+            padding: 25px 50px;
+            margin: 0 50px;
+        }
+
+        @include respond-below(sm) {
+            margin: 0 20px;
+            padding: 20px 30px;
+        }
+
+        @include respond-below(xs) {
+            margin: 0 10px;
+            padding: 20px 5px;
+        }
+
+        .prev-post,
+        .next-post {
+            a {
+                height: 50px;
+                width: 50px;
+                line-height: 50px;
+                text-align: center;
+                border-radius: 50%;
+                font-size: 18px;
+                color: $white;
+                background-color: $black;
+                border: 1px solid $black;
+                @include transition(0.3s);
+                margin-right: 20px;
+
+                @include respond-below(xs) {
+                    height: 30px;
+                    width: 30px;
+                    line-height: 30px;
+                    margin-right: 5px;
+                    font-size: 14px;
+                }
+
+                &:hover {
+                    background-color: transparent;
+                    color: $black;
+                }
+            }
+
+            span.title {
+                font-size: 16px;
+                font-weight: 700;
+                font-family: $rob_s;
+
+                @include respond-below(xs) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .next-post a {
+            margin-right: 0;
+            margin-left: 20px;
+
+            @include respond-below(xs) {
+                margin-left: 5px;
+                margin-right: 0;
+            }
+        }
+    }
+
+    .related-posts {
+        padding: 60px 100px 20px;
+
+        @include respond-below(md) {
+            padding: 60px 50px 20px;
+        }
+
+        @include respond-below(sm) {
+            padding: 60px 30px 20px;
+        }
+
+        @include respond-below(xs) {
+            padding: 60px 20px 20px;
+        }
+
+        .related-title {
+            font-size: 25px;
+            margin-bottom: 30px;
+        }
+
+        .related-loop {
+            margin-left: -40px;
+            margin-right: -40px;
+
+            @include respond-below(md) {
+                margin-left: -20px;
+                margin-right: -20px;
+            }
+
+            &.row>.col,
+            &.row>[class*=col-] {
+                padding-right: 40px;
+                padding-left: 40px;
+
+                @include respond-below(md) {
+                    padding-right: 20px;
+                    padding-left: 20px;
+                }
+            }
+
+            .related-post-box {
+                text-align: center;
+                margin-bottom: 40px;
+
+                .thumb {
+                    margin-bottom: 20px;
+                }
+
+                .title {
+                    font-size: 20px;
+                    line-height: 1.6;
+
+                    @include respond-below(md) {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.comment-template {
+    padding: 0 100px;
+
+    @include respond-below(md) {
+        padding: 0 50px;
+    }
+
+    @include respond-below(sm) {
+        padding: 0 20px;
+    }
+
+    .template-title {
+        font-size: 25px;
+        line-height: 1;
+        margin-bottom: 60px;
+        text-decoration: underline;
+
+        @include respond-below(xs) {
+            font-size: 22px;
+        }
+    }
+
+    .comment-list {
+        margin-bottom: 60px;
+
+        li {
+            &:not(:last-child) {
+                margin-bottom: 50px;
+            }
+
+            .comment-body {
+                display: grid;
+                grid-template-columns: 60px 1fr;
+                grid-gap: 20px;
+
+                @include respond-below(xs) {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            .comment-author {
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+
+            .comment-footer {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 25px;
+
+                .date {
+                    color: #989898;
+                    font-size: 14px;
+                }
+
+                .reply-link {
+                    line-height: 1;
+                    font-family: $rob_s;
+                    font-weight: 700;
+                    color: $black;
+                    border: 1px solid #ececec;
+                    border-radius: 12px;
+                    padding: 8px 25px;
+                    font-size: 13px;
+
+                    &:hover {
+                        color: $white;
+                        border-color: $black;
+                        background-color: $black;
+                    }
+                }
+            }
+        }
+    }
+
+    .comment-form {
+        .row {
+            margin-left: -25px;
+            margin-right: -25px;
+
+            &>.col,
+            &>[class*=col-] {
+                padding-right: 25px;
+                padding-left: 25px;
+            }
+        }
+
+        input,
+        textarea {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #ebebeb;
+            padding-left: 0;
+            height: 50px;
+            margin-bottom: 30px;
+        }
+
+        ::placeholder {
+            font-size: 15px;
+            color: #7d7d7d;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        button {
+            font-size: 14px;
+            font-weight: 500;
+            background-color: #2F2F2F;
+            color: $white;
+            line-height: 1;
+            text-transform: uppercase;
+            padding: 15px 50px;
+            border-radius: 23px;
+            border: 1px solid #2F2F2F;
+            @include transition(0.3s);
+
+            &:hover {
+                background-color: $white;
+                color: $black;
+            }
+
+            i {
+                font-size: 12px;
+                position: relative;
+                top: -1px;
+                margin-left: 10px;
+            }
+        }
+    }
+}

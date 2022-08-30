@@ -1,0 +1,197 @@
+/*=======  Banner Sider  =======*/
+.banner-section {
+    position: relative;
+
+    .sinlge-banner {
+        @media (min-width: 1400px) {
+            padding-left: 90px;
+            padding-right: 90px;
+        }
+
+        padding-left: 15px;
+        padding-right: 15px;
+
+        .banner-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 740px;
+            background-color: #fff;
+
+            @include respond-below(md) {
+                height: 660px;
+            }
+
+            @include respond-below(sm) {
+                height: 560px;
+            }
+
+        }
+
+        .banner-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 74.5%;
+            background-size: cover;
+            background-position: center;
+            background-color: #f4f4f4;
+            z-index: 1;
+        }
+
+        .banner-content {
+            padding: 100px;
+            background-color: $white;
+            max-width: 630px;
+            box-shadow: 0px 5px 110px 0px rgba(24, 24, 25, 0.08);
+            font-size: 15px;
+            position: relative;
+            z-index: 2;
+
+            @include respond-below(lg) {
+                max-width: 520px;
+                padding: 60px;
+            }
+
+            @include respond-below(md) {
+                max-width: 500px;
+                padding: 50px;
+            }
+
+            @include respond-below(sm) {
+                max-width: 420px;
+                padding: 30px;
+                font-size: 14px;
+            }
+
+            @include respond-below(xs) {
+                font-size: 13px;
+                max-width: 90%;
+            }
+
+            .title {
+                font-size: 38px;
+                line-height: 1.28;
+                font-weight: 800;
+                margin-bottom: 40px;
+
+                @include respond-below(md) {
+                    font-size: 32px;
+                    margin-bottom: 30px;
+                }
+
+                @include respond-below(sm) {
+                    font-size: 18px;
+                    margin-bottom: 25px;
+                }
+            }
+
+            .meta {
+                display: flex;
+                margin-bottom: 40px;
+
+                @include respond-below(md) {
+                    margin-bottom: 30px;
+                }
+
+                @include respond-below(sm) {
+                    margin-bottom: 20px;
+                }
+
+                li {
+                    &:not(:last-child) {
+                        margin-right: 15px;
+                    }
+                }
+
+                a {
+                    font-size: 13px;
+                    color: #666666;
+
+                    @include respond-below(sm) {
+                        font-size: 11px;
+                    }
+
+                    &:hover {
+                        color: $black;
+                    }
+                }
+            }
+
+            .read-more {
+                font-size: 16px;
+                font-family: $rob_s;
+                font-weight: 800;
+                line-height: 1;
+                margin-top: 30px;
+
+                @include respond-below(sm) {
+                    font-size: 14px;
+                }
+
+                i {
+                    margin-left: 10px;
+                    position: relative;
+                }
+
+                &:hover {
+                    opacity: 0.8;
+                    padding-left: 8px;
+                }
+            }
+        }
+    }
+
+    .banner-nav {
+        position: absolute;
+        bottom: 40px;
+        left: 55px;
+        z-index: 2;
+        background-color: $white;
+        border: 1px solid #cacaca;
+
+        @media (min-width: 1400px) {
+            left: 130px;
+        }
+
+        @include respond-below(sm) {
+            bottom: 15px;
+            left: 30px;
+        }
+
+        .slick-arrow {
+            width: 70px;
+            height: 70px;
+            background-color: $white;
+            border: none;
+            color: $black;
+
+            @include respond-below(md) {
+                height: 50px;
+                width: 50px;
+            }
+
+            @include respond-below(sm) {
+                height: 45px;
+                width: 45px;
+            }
+
+            &.prev-arrow {
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    background-color: #b6b6b6;
+                    height: 8px;
+                    width: 2px;
+                    right: -1px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}

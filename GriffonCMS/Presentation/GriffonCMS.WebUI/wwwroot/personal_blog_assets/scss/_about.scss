@@ -1,0 +1,84 @@
+/*======= About SCSS =======*/
+.about-section {
+    padding: 130px 0;
+
+    @include respond-below(md) {
+        padding: 100px 0;
+    }
+
+    @include respond-below(sm) {
+        padding: 80px 0;
+    }
+}
+
+.about-text {
+    @include respond-below(md) {
+        margin-top: 50px;
+    }
+
+    .title {
+        font-size: 48px;
+        font-weight: 800;
+        margin-bottom: 20px;
+
+        @include respond-below(md) {
+            font-size: 40px;
+        }
+
+        @include respond-below(sm) {
+            font-size: 30px;
+        }
+    }
+
+    .subtitle {
+        font-size: 32px;
+        font-weight: 800;
+        text-decoration: underline;
+        color: $black;
+        font-family: $rob_s;
+        line-height: 1.5;
+        margin-bottom: 70px;
+
+        @include respond-below(lg) {
+            margin-bottom: 40px;
+            font-size: 24px;
+        }
+
+        @include respond-below(md) {
+            margin-bottom: 40px;
+            font-size: 20px;
+        }
+
+        @include respond-below(sm) {
+            font-size: 16px;
+        }
+    }
+
+    .social-links {
+        display: flex;
+        align-items: center;
+        margin-top: 60px;
+
+        @include respond-below(md) {
+            margin-top: 40px;
+        }
+
+        li {
+            margin-right: 15px;
+
+            span {
+                font-family: $rob_s;
+                font-weight: 700;
+                margin-right: 15px;
+
+                @include respond-below(sm) {
+                    margin-right: 10px;
+                }
+            }
+
+            a, span {
+                color: $black;
+            }
+        }
+    }
+}

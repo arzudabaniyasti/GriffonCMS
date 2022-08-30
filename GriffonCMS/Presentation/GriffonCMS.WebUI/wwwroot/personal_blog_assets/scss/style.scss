@@ -1,0 +1,44 @@
+/*-----------------------------------------------------------------------------------
+    Template Name: Genial Blog HTML Template
+    Template URI: https://webtend.net/demo/html/genial/
+    Author: WebTend
+    Author URI:  https://webtend.net/
+    Version: 1.0
+
+    Note: This is Main Style Scss File.
+-----------------------------------------------------------------------------------
+	CSS INDEX
+	===================
+    01. Common
+    02. Header
+    02. Banner Sider
+    02. Posts
+    02. Sidebar
+    02. Instagram Section
+    02. Post Details
+    02. About
+    02. 404 Pages
+    02. Photo Stories
+    02. Contact
+    02. Footer
+
+-----------------------------------------------------------------------------------*/
+
+@import 'variables';
+@import 'common';
+@import 'header';
+@import 'banner';
+@import 'posts';
+@import 'sidebar';
+@import 'instagram';
+@import 'image-boxes.scss';
+@import 'post-details';
+@import 'about';
+@import '404';
+@import 'photo-stories';
+@import 'contact';
+@import 'product';
+@import 'cart';
+@import 'myaccount';
+@import 'checkout';
+@import 'footer';
