@@ -36,6 +36,7 @@ html, body {
     height: 100%;
 }
 
+
 .form-body > .row {
     position: relative;
     margin-left: 0;
@@ -261,7 +262,7 @@ html, body {
 .form-holder .form-content :-ms-input-placeholder {
     color: #526489;
 }
-
+#9021ff
 .form-control:focus {
     -webkit-box-shadow: none;
     box-shadow: none;
