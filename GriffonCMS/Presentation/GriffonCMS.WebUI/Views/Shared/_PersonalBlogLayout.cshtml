@@ -29,6 +29,15 @@
 	<link rel="stylesheet" href="~/personal_blog_assets/css/jquery-nice-select.min.css" />
 	<!--====== Style css ======-->
 	<link rel="stylesheet" href="~/personal_blog_assets/css/style.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="~/personal_blog_assets/assets2/css/plugins.css" />
+    <link rel="stylesheet" type="text/css" href="~/personal_blog_assets/assets2/css/rtl.css" />
+    <link rel="stylesheet" type="text/css" href="~/personal_blog_assets/assets2/css/colors.css" />
+    <link rel="stylesheet" type="text/css" href="~/personal_blog_assets/assets2/css/darkMode.css" />
+    <link rel="stylesheet" type="text/css" href="~/personal_blog_assets/assets2/css/onePage.css" />
+    <link rel="stylesheet" type="text/css" href="~/personal_blog_assets/assets2/css/elements.css" />
+    <link rel="stylesheet" type="text/css" href="~/personal_blog_assets/assets2/css/style.css" />
 </head>
 
 <body>
@@ -79,7 +88,7 @@
                                 <li><a href=" @Url.Action("Index","Home")">Home</a></li>
                                 <li><a href="@Url.Action("About","About")">About</a></li>
                                 <li><a href="@Url.Action("Index","Resume")">Resume</a></li>
-                                <li><a href="@Url.Action("Index","Projects")">Projects</a></li>                              
+                                <li><a href="@Url.Action("Index","Project")">Projects</a></li>                              
                                 <li>
                                     <a href="@Url.Action("Index","Blog")">Blog</a>
                                     <ul class="submenu">
@@ -90,7 +99,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="@Url.Action("Index","PhotoStories")">Photo Stories</a></li>
-                                <li><a href="@Url.Action("Index","Contact")">Contact</a></li>
+                                <li><a href="@Url.Action("Contact","Contact")">Contact</a></li>
 								
 							</ul>
 
@@ -111,73 +120,6 @@
 	<!--====== Header part end ======-->
 
     @RenderBody()
-	<!--====== Instagram Area Start ======-->
-	<section class="instagram-section">
-		<div class="container-fluid p-0">
-			<h5 class="instagram-title">
-				Follow Us <span class="instagram-icon"><i class="fab fa-instagram"></i></span> Instagram
-			</h5>
-			<div class="instagram-images">
-				<div class="image">
-					<img src="~/personal_blog_assets/img/instagram/01.jpg" alt="Instagram-image">
-					<a class="instagram-link" href="#"><i class="fab fa-instagram"></i></a>
-				</div>
-				<div class="image">
-					<img src="~/personal_blog_assets/img/instagram/02.jpg" alt="Instagram-image">
-					<a class="instagram-link" href="#"><i class="fab fa-instagram"></i></a>
-				</div>
-				<div class="image">
-					<img src="~/personal_blog_assets/img/instagram/03.jpg" alt="Instagram-image">
-					<a class="instagram-link" href="#"><i class="fab fa-instagram"></i></a>
-				</div>
-				<div class="image">
-					<img src="~/personal_blog_assets/img/instagram/04.jpg" alt="Instagram-image">
-					<a class="instagram-link" href="#"><i class="fab fa-instagram"></i></a>
-				</div>
-				<div class="image">
-					<img src="~/personal_blog_assets/img/instagram/05.jpg" alt="Instagram-image">
-					<a class="instagram-link" href="#"><i class="fab fa-instagram"></i></a>
-				</div>
-				<div class="image">
-					<img src="~/personal_blog_assets/img/instagram/06.jpg" alt="Instagram-image">
-					<a class="instagram-link" href="#"><i class="fab fa-instagram"></i></a>
-				</div>
-				<div class="image">
-					<img src="~/personal_blog_assets/img/instagram/07.jpg" alt="Instagram-image">
-					<a class="instagram-link" href="#"><i class="fab fa-instagram"></i></a>
-				</div>
-				<div class="image">
-					<img src="~/personal_blog_assets/img/instagram/01.jpg" alt="Instagram-image">
-					<a class="instagram-link" href="#"><i class="fab fa-instagram"></i></a>
-				</div>
-				<div class="image">
-					<img src="~/personal_blog_assets/img/instagram/02.jpg" alt="Instagram-image">
-					<a class="instagram-link" href="#"><i class="fab fa-instagram"></i></a>
-				</div>
-				<div class="image">
-					<img src="~/personal_blog_assets/img/instagram/03.jpg" alt="Instagram-image">
-					<a class="instagram-link" href="#"><i class="fab fa-instagram"></i></a>
-				</div>
-				<div class="image">
-					<img src="~/personal_blog_assets/img/instagram/04.jpg" alt="Instagram-image">
-					<a class="instagram-link" href="#"><i class="fab fa-instagram"></i></a>
-				</div>
-				<div class="image">
-					<img src="~/personal_blog_assets/img/instagram/05.jpg" alt="Instagram-image">
-					<a class="instagram-link" href="#"><i class="fab fa-instagram"></i></a>
-				</div>
-				<div class="image">
-					<img src="~/personal_blog_assets/img/instagram/06.jpg" alt="Instagram-image">
-					<a class="instagram-link" href="#"><i class="fab fa-instagram"></i></a>
-				</div>
-				<div class="image">
-					<img src="~/personal_blog_assets/img/instagram/07.jpg" alt="Instagram-image">
-					<a class="instagram-link" href="#"><i class="fab fa-instagram"></i></a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--====== Instagram Area End ======-->
 
 	<!--====== Footer Area Start ======-->
 	<footer>
@@ -274,6 +216,16 @@
 	<script src="~/personal_blog_assets/js/jquery.nice-select.min.js"></script>
 	<!--====== Main js ======-->
     <script src="~/personal_blog_assets/js/main.js"></script>
+
+
+    <script src="~/personal_blog_assets/assets2/js/jquery.js"></script>
+    <!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->
+    <script src="~/personal_blog_assets/assets2/js/plugins.js"></script>
+    <script src="~/personal_blog_assets/assets2/js/elements.js"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5bpEs3xlB8vhxNFErwoo3MXR64uavf6Y&callback=initMap"></script>
+    <script src="~/personal_blog_assets/assets2/js/init.js"></script>
+    <!-- /SCRIPTS -->
 </body>
 
 </html>

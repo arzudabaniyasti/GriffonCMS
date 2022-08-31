@@ -33,8 +33,4 @@
       <ProjectReference Include="..\..\Business\GriffonCMS.Infrastructure\GriffonCMS.Infrastructure.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="wwwroot\personal_blog_assets\" />
-    </ItemGroup>
-
 </Project>

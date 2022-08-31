@@ -13,4 +13,8 @@ public class BlogController : BaseController
     {
         return View();
     }
+    public IActionResult Details()
+    {
+        return View();
+    }
 }
