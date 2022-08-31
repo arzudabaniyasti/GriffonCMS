@@ -1,0 +1,308 @@
+/*=======  COMMON CSS  =======*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap");
+
+body {
+    font-family: $rob;
+    font-weight: 400;
+    font-style: normal;
+    color: $text-color;
+    overflow-x: hidden;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    @include box-sizing(border-box);
+}
+
+img {
+    max-width: 100%;
+    @include transition(0.3s);
+}
+
+a:focus,
+input:focus,
+textarea:focus,
+button:focus,
+.slick-initialized .slick-slide:focus,
+.btn:focus,
+select:focus {
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+}
+
+input,
+textarea,
+button,
+select {
+    border: none;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    background-color: transparent;
+    padding: 0 20px;
+    height: 45px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #555555;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nice-select {
+    height: 45px;
+    line-height: 45px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    padding: 0 20px;
+
+    &::after {
+        right: 20px;
+    }
+}
+
+textarea {
+    height: 200px;
+    padding-top: 20px;
+    resize: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    height: auto;
+    width: auto;
+}
+
+::placeholder {
+    opacity: 1;
+    color: #555555;
+}
+
+::-webkit-scrollbar {
+    background-color: #ccc;
+    width: 8px;
+}
+
+::-webkit-scrollbar:horizontal {
+    background-color: #ccc;
+    height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $text-color;
+}
+
+.slick-slide img {
+    display: inline-block;
+}
+
+a:focus,
+a:hover {
+    text-decoration: none;
+}
+
+i,
+span,
+a {
+    display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $rob_s;
+    font-weight: 700;
+    margin: 0px;
+
+    &,
+    a {
+        color: $black;
+    }
+}
+
+ul,
+ol {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+p {
+    margin: 0px;
+}
+
+a {
+    @include transition(0.3s);
+
+    &,
+    &:hover {
+        color: $black;
+    }
+}
+
+/*=======  Common Classes  =======*/
+.container-1250 {
+    @media (min-width: 1300px) {
+        max-width: 1250px;
+    }
+}
+
+.container-1360 {
+    @media (min-width: 1400px) {
+        max-width: 1360px;
+    }
+}
+
+.container-1000 {
+    @media (min-width: 1200px) {
+        max-width: 1000px;
+    }
+}
+
+.container-fluid {
+    @media (min-width: 1400px) {
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+}
+
+.line-one {
+    margin-top: 90px;
+    margin-bottom: 90px;
+    height: 1px;
+    width: 100%;
+    background-color: #e5e5e5;
+}
+
+.section-gap-80-120 {
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+.section-gap-100-80 {
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+/*======= Preloader =======*/
+div#preloader {
+    margin: auto;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: $text-color;
+    z-index: 9999999;
+
+    .line {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -30px;
+        width: 60px;
+        height: 4px;
+        background: $white;
+        animation: spin 1.5s infinite ease;
+
+        &:nth-of-type(2) {
+            animation-delay: 0.1s;
+        }
+
+        &:nth-of-type(3) {
+            animation-delay: 0.2s;
+        }
+
+        &:nth-of-type(4) {
+            animation-delay: 0.3s;
+        }
+    }
+}
+
+/*=======  Utilitis =======*/
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.mt-60 {
+    margin-top: 60px;
+}
+
+.mt-80 {
+    margin-top: 60px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-25 {
+    margin-bottom: 25px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+.mb-80 {
+    margin-bottom: 80px;
+}
+
+/*=======  Animations  =======*/
+@keyframes sticky {
+    0% {
+        top: -200px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes pulse-border {
+    0% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}

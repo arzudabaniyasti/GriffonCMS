@@ -1,0 +1,50 @@
+/*======= 404 Pages =======*/
+.error-section {
+    padding-top: 150px;
+    padding-bottom: 130px;
+
+    @include respond-below(md) {
+        padding-top: 110px;
+        padding-bottom: 90px;
+    }
+
+    @include respond-below(sm) {
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+}
+
+.error-text {
+    h1 {
+        font-size: 19px;
+        font-weight: 700;
+        letter-spacing: 16px;
+
+        @include respond-below(md) {
+            letter-spacing: 10px;
+            font-size: 18px;
+        }
+
+        @include respond-below(sm) {
+            letter-spacing: 5px;
+        }
+
+        span {
+            display: block;
+            font-size: 250px;
+            letter-spacing: 10px;
+
+            @include respond-below(md) {
+                font-size: 200px;
+            }
+
+            @include respond-below(sm) {
+                font-size: 180px;
+            }
+
+            @include respond-below(xs) {
+                font-size: 120px;
+            }
+        }
+    }
+}

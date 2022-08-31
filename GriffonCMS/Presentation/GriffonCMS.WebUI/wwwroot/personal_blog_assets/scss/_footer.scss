@@ -1,0 +1,168 @@
+/*======= Footer =======*/
+footer {
+    .footer-widgets-area {
+        padding-top: 120px;
+        padding-bottom: 70px;
+
+        .widget {
+            margin-bottom: 50px;
+
+            .widget-title {
+                font-size: 22px;
+                font-weight: 800;
+                margin-bottom: 40px;
+                line-height: 1.4;
+
+                @include respond-below(sm) {
+                    font-size: 20px;
+                    margin-bottom: 30px;
+                }
+            }
+
+            &.address-widget {
+                p {
+                    margin-bottom: 20px;
+                }
+            }
+
+            &.nav-widget {
+                li {
+                    font-weight: 500;
+
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+
+                    a:hover {
+                        padding-left: 8px;
+                    }
+                }
+            }
+
+            &.newsletter-widget {
+                text-align: center;
+
+                @include respond-below(md) {
+                    text-align: left;
+                }
+
+                p {
+                    font-family: $rob_s;
+                    font-weight: 500;
+                    font-size: 16px;
+                    padding-top: 20px;
+                    margin-bottom: 30px;
+
+                    @include respond-below(md) {
+                        padding-top: 0;
+                    }
+
+                    @include respond-below(sm) {
+                        font-size: 14px;
+                    }
+                }
+
+                form {
+                    position: relative;
+
+                    input {
+                        padding-right: 120px;
+                    }
+
+                    button {
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        height: 100%;
+                        padding: 0 28px;
+                        background-color: $black;
+                        color: $white;
+                        z-index: 2;
+                        font-family: $rob_s;
+                        font-weight: 500;
+                        border-left: 5px solid $white;
+
+                        @include respond-below(sm) {
+                            position: relative;
+                            height: 45px;
+                            width: 100%;
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-copyright-area {
+        padding: 50px 0;
+        border-top: 1px solid #e5e5e5;
+        position: relative;
+        z-index: 1;
+
+        @include respond-below(md) {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: 50%;
+            top: 0;
+            transform: translate(-50%, 0);
+            width: 1px;
+            height: 100%;
+            background: #e5e5e5;
+            content: "";
+            z-index: -1;
+
+            @include respond-below(md) {
+                display: none;
+            }
+        }
+
+        .social-links {
+            ul {
+                display: flex;
+                font-size: 14px;
+                flex-wrap: wrap;
+
+                @include respond-below(md) {
+                    justify-content: center;
+                    margin-bottom: 30px;
+                }
+
+                li {
+                    margin-right: 10px;
+
+                   &.title {
+                        margin-right: 20px;
+                        color: $black;
+                        font-weight: 600;
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+
+                a {
+                    color: $text-color;
+
+                    &:hover {
+                        color: $black;
+                    }
+                }
+            }
+        }
+
+        .copyright-text {
+            font-size: 14px;
+            span {
+                color: $black;
+                font-weight: 700;
+            }
+        }
+    }
+}

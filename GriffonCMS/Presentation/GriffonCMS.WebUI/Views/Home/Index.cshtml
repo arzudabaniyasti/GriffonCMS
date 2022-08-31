@@ -1,41 +1,387 @@
 ﻿
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_PersonalBlogLayout.cshtml";
 }
-<!DOCTYPE html>
-<head>
-	<title>Arzu | Home</title>
-</head>
 
 <!-- HOME -->
-<body>
-<div><img class="shane_tm_fixed_image" src="~/images/about/1.jpg" alt="" /></div>
-<div id="home" class="shane_tm_section active">
-	<div class="shane_tm_home">
-		<div class="content">
-			<div class="image">
-				<div><img class="main" src="~/images/about/1.jpg" alt="" /></div>
-			</div>
-			<h3 class="name">Martin <span class="coloring">Peterson</span></h3>
-			<div class="shane_tm_animate_text">
-				<span class="cd-headline zoom">
-					<!-- ANIMATE TEXT VALUES: zoom, rotate-1, letters type, letters rotate-2, loading-bar, slide, clip, letters rotate-3, letters scale, push,  -->
-					<span class="blc">I'm a</span>
-					<span class="cd-words-wrapper">
-						<b class="is-visible">developer</b>
-						<b>freelancer</b>
-						<b>designer</b>
-					</span>
-				</span>
-			</div>
-			<div class="shane_tm_button">
-				<a href="~/images/resume/resume.jpg"><span>Download CV</span></a>
-			</div>
-		</div>
-	</div>
-</div>
-</body>
+<!--====== Banner Area Start ======-->
+<section class="banner-section">
+    <div class="banner-slider">
+        <div class="sinlge-banner">
+            <div class="banner-wrapper">
+                <div class="banner-bg" style="background-image: url(~/personal_blog_assets/img/banner/01.jpg);"></div>
+                <div class="banner-content" data-animation="fadeInUp" data-delay="0.3s">
+                    <h3 class="title" data-animation="fadeInUp" data-delay="0.6s">
+                        <a href="#">
+                            The Olivier da Costa restaurant experience in Lisbon
+                        </a>
+                    </h3>
+                    <ul class="meta" data-animation="fadeInUp" data-delay="0.8s">
+                        <li><a href="#">By - Zhon Smith</a></li>
+                        <li><a href="#">Travel,</a><a href="#">Design,</a><a href="#">Nature</a></li>
+                    </ul>
+                    <p data-animation="fadeInUp" data-delay="1s">
+                        When it comes to creating is a website for your busin an attractive design will only get you
+                        far. With people increasingly using their tablets and smartphones and shop online,...
+                    </p>
+                    <a href="blog-details.html" class="read-more" data-animation="fadeInUp" data-delay="1.2s">
+                        Read More <i class="fas fa-long-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="sinlge-banner">
+            <div class="banner-wrapper">
+                <div class="banner-bg" style="background-image: url(~/personal_blog_assets/img/banner/02.jpg);"></div>
+                <div class="banner-content" data-animation="fadeInUp" data-delay="0.3s">
+                    <h3 class="title" data-animation="fadeInUp" data-delay="0.6s">
+                        <a href="#">
+                            The Olivier da Costa restaurant experience in Lisbon
+                        </a>
+                    </h3>
+                    <ul class="meta" data-animation="fadeInUp" data-delay="0.8s">
+                        <li><a href="#">By - Zhon Smith</a></li>
+                        <li><a href="#">Travel,</a><a href="#">Design,</a><a href="#">Nature</a></li>
+                    </ul>
+                    <p data-animation="fadeInUp" data-delay="1s">
+                        When it comes to creating is a website for your busin an attractive design will only get you
+                        far. With people increasingly using their tablets and smartphones and shop online,...
+                    </p>
+                    <a href="blog-details.html" class="read-more" data-animation="fadeInUp" data-delay="1.2s">
+                        Read More <i class="fas fa-long-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner-nav"></div>
+</section>
+<!--====== Banner Area End ======-->
+<!--====== Post Area Start ======-->
+<section class="post-area with-sidebar" id="postWarpperLoaded">
+    <div class="container container-1250">
+        <div class="post-area-inner">
+            <div class="entry-posts two-column masonary-posts row">
+                <div class="col-lg-6 col-sm-6">
+                    <div class="entry-post">
+                        <div class="entry-thumbnail">
+                            <img src="~/personal_blog_assets/img/posts/01.jpg" alt="Image">
+                        </div>
+                        <div class="entry-content">
+                            <h4 class="title">
+                                <a href="blog-details.html">
+                                    Best Wordpress Theme of 2018
+                                </a>
+                            </h4>
+                            <ul class="post-meta">
+                                <li class="date">
+                                    <a href="#">18-04-21</a>
+                                </li>
+                                <li class="categories">
+                                    <a href="#">Design,</a>
+                                    <a href="#">Travel,</a>
+                                    <a href="#">photography,</a>
+                                    <a href="#">Nature</a>
+                                </li>
+                            </ul>
+                            <p>
+                                When it comes to creating is a website for your business, an attractive design
+                                will only get you far. With people increasingly using their tablets and
+                                smartphones and shop online,...
+                            </p>
+                            <a href="blog-details.html" class="read-more">
+                                Read More <i class="fas fa-long-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                    <div class="entry-post">
+                        <div class="entry-thumbnail">
+                            <img src="~/personal_blog_assets/img/posts/02.jpg" alt="Image">
+                        </div>
+                        <div class="entry-content">
+                            <h4 class="title">
+                                <a href="blog-details.html">
+                                    Nature Photography Best Focus
+                                </a>
+                            </h4>
+                            <ul class="post-meta">
+                                <li class="date">
+                                    <a href="#">18-04-21</a>
+                                </li>
+                                <li class="categories">
+                                    <a href="#">Design,</a>
+                                    <a href="#">Travel,</a>
+                                    <a href="#">photography,</a>
+                                    <a href="#">Nature</a>
+                                </li>
+                            </ul>
+                            <p>
+                                When it comes to creating is a website for your business, an attractive design
+                                will only get you far. With people increasingly using their tablets and
+                                smartphones and shop online,...
+                            </p>
+                            <a href="blog-details.html" class="read-more">
+                                Read More <i class="fas fa-long-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                    <div class="entry-post">
+                        <div class="entry-thumbnail">
+                            <img src="~/personal_blog_assets/img/posts/04.jpg" alt="Image">
+                        </div>
+                        <div class="entry-content">
+                            <h4 class="title">
+                                <a href="blog-details.html">
+                                    Tasty Burger Food Review
+                                </a>
+                            </h4>
+                            <ul class="post-meta">
+                                <li class="date">
+                                    <a href="#">18-04-21</a>
+                                </li>
+                                <li class="categories">
+                                    <a href="#">Design,</a>
+                                    <a href="#">Travel,</a>
+                                    <a href="#">photography,</a>
+                                    <a href="#">Nature</a>
+                                </li>
+                            </ul>
+                            <p>
+                                When it comes to creating is a website for your business, an attractive design
+                                will only get you far. With people increasingly using their tablets and
+                                smartphones and shop online,...
+                            </p>
+                            <a href="blog-details.html" class="read-more">
+                                Read More <i class="fas fa-long-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                    <div class="entry-post">
+                        <div class="entry-thumbnail">
+                            <img src="~/personal_blog_assets/img/posts/03.jpg" alt="Image">
+                        </div>
+                        <div class="entry-content">
+                            <h4 class="title">
+                                <a href="blog-details.html">
+                                    World Best Travel Place in 2020
+                                </a>
+                            </h4>
+                            <ul class="post-meta">
+                                <li class="date">
+                                    <a href="#">18-04-21</a>
+                                </li>
+                                <li class="categories">
+                                    <a href="#">Design,</a>
+                                    <a href="#">Travel,</a>
+                                    <a href="#">photography,</a>
+                                    <a href="#">Nature</a>
+                                </li>
+                            </ul>
+                            <p>
+                                When it comes to creating is a website for your business, an attractive design
+                                will only get you far. With people increasingly using their tablets and
+                                smartphones and shop online,...
+                            </p>
+                            <a href="blog-details.html" class="read-more">
+                                Read More <i class="fas fa-long-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                    <div class="entry-post">
+                        <div class="entry-thumbnail">
+                            <img src="~/personal_blog_assets/img/posts/05.jpg" alt="Image">
+                        </div>
+                        <div class="entry-content">
+                            <h4 class="title">
+                                <a href="blog-details.html">
+                                    New Dress For 2021, Exclusive Collection
+                                </a>
+                            </h4>
+                            <ul class="post-meta">
+                                <li class="date">
+                                    <a href="#">18-04-21</a>
+                                </li>
+                                <li class="categories">
+                                    <a href="#">Design,</a>
+                                    <a href="#">Travel,</a>
+                                    <a href="#">photography,</a>
+                                    <a href="#">Nature</a>
+                                </li>
+                            </ul>
+                            <p>
+                                When it comes to creating is a website for your business, an attractive design
+                                will only get you far. With people increasingly using their tablets and
+                                smartphones and shop online,...
+                            </p>
+                            <a href="blog-details.html" class="read-more">
+                                Read More <i class="fas fa-long-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                    <div class="entry-post">
+                        <div class="entry-thumbnail">
+                            <img src="~/personal_blog_assets/img/posts/06.jpg" alt="Image">
+                        </div>
+                        <div class="entry-content">
+                            <h4 class="title">
+                                <a href="blog-details.html">
+                                    Best Wordpress Theme of 2018
+                                </a>
+                            </h4>
+                            <ul class="post-meta">
+                                <li class="date">
+                                    <a href="#">18-04-21</a>
+                                </li>
+                                <li class="categories">
+                                    <a href="#">Design,</a>
+                                    <a href="#">Travel,</a>
+                                    <a href="#">photography,</a>
+                                    <a href="#">Nature</a>
+                                </li>
+                            </ul>
+                            <p>
+                                When it comes to creating is a website for your business, an attractive design
+                                will only get you far. With people increasingly using their tablets and
+                                smartphones and shop online,...
+                            </p>
+                            <a href="blog-details.html" class="read-more">
+                                Read More <i class="fas fa-long-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="text-center">
+                        <a href="#" class="load-more-btn">Load More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="primary-sidebar clearfix">
+                <div class="sidebar-masonary row justify-content-center">
+                    <div class="col-lg-12 col-md-6 col-sm-8 widget author-widget">
+                        <div class="author-img">
+                            <img src="~/personal_blog_assets/img/sidebar/author.jpg" alt="Post-Author">
+                        </div>
+                        <h5 class="widget-title">I am a Bloger</h5>
+                        <p>
+                            When it comes to creating is a website for your business, an attractive design will only
+                            get you far,...
+                        </p>
+                        <div class="author-signature">
+                            <img src="~/personal_blog_assets/img/sidebar/author-signature.png" alt="Signature">
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-6 col-sm-8 widget categories-widget">
+                        <h5 class="widget-title">Categoriesr</h5>
+                        <div class="categories">
+                            <div class="categorie" style="background-image: url(~/personal_blog_assets/img/sidebar/cat/01.jpg);">
+                                <a href="#">
+                                    Business
+                                </a>
+                            </div>
+                            <div class="categorie" style="background-image: url(~/personal_blog_assets/img/sidebar/cat/02.jpg);">
+                                <a href="#">
+                                    Fashion
+                                </a>
+                            </div>
+                            <div class="categorie" style="background-image: url(~/personal_blog_assets/img/sidebar/cat/03.jpg);">
+                                <a href="#">
+                                    Artistic
+                                </a>
+                            </div>
+                            <div class="categorie" style="background-image: url(~/personal_blog_assets/img/sidebar/cat/04.jpg);">
+                                <a href="#">
+                                    Media
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-6 col-sm-8 widget social-widget">
+                        <h5 class="widget-title">Subscribe</h5>
+                        <div class="social-links">
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>Facebook
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>Twitter
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>Instagram
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-youtube"></i>YouTube
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-pinterest-p"></i>Pinterest
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-6 col-sm-8 widget popular-articles">
+                        <h5 class="widget-title">Popular Articles</h5>
+                        <div class="articles">
+                            <div class="article">
+                                <div class="thumb">
+                                    <img src="~/personal_blog_assets/img/sidebar/articles/01.jpg" alt="Image">
+                                </div>
+                                <div class="desc">
+                                    <h6><a href="blog-details.html">Best Wordpress Theme of 2018</a></h6>
+                                    <span class="post-date">Audust 23, 2015</span>
+                                </div>
+                            </div>
+                            <div class="article">
+                                <div class="thumb">
+                                    <img src="~/personal_blog_assets/img/sidebar/articles/02.jpg" alt="Image">
+                                </div>
+                                <div class="desc">
+                                    <h6>
+                                        <a href="blog-details.html">
+                                            Dating While Studying Abroad—Maximize Fun
+                                            Minimize Heartbreak
+                                        </a>
+                                    </h6>
+                                    <span class="post-date">Audust 23, 2015</span>
+                                </div>
+                            </div>
+                            <div class="article">
+                                <div class="thumb">
+                                    <img src="~/personal_blog_assets/img/sidebar/articles/03.jpg" alt="Image">
+                                </div>
+                                <div class="desc">
+                                    <h6><a href="blog-details.html">Nature Photography Best Place Focus</a></h6>
+                                    <span class="post-date">Audust 23, 2015</span>
+                                </div>
+                            </div>
+                            <div class="article">
+                                <div class="thumb">
+                                    <img src="~/personal_blog_assets/img/sidebar/articles/04.jpg" alt="Image">
+                                </div>
+                                <div class="desc">
+                                    <h6><a href="blog-details.html">Best Wordpress Theme of 2018</a></h6>
+                                    <span class="post-date">Audust 23, 2015</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-6 col-sm-8 widget ad-widget">
+                        <img src="~/personal_blog_assets/img/sidebar/ad.jpg" alt="Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--====== Post Area End ======-->
 
 <!-- /HOME -->
 
