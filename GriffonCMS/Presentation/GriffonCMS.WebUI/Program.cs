@@ -21,7 +21,7 @@ builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
 // Example Options
 //builder.Services.Configure<GriffonEFContextOptions>(options => builder.Configuration.GetConnectionString("GriffonSQLServer"));
-
+//var GriffonSQLServer = "Data Source=ARZU\\SQLEXPRESS; Initial Catalog = Cinephile; Integrated Security = True";
 builder.Services.AddDbContext<GriffonEFContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("GriffonSQLServer")));
 
 builder.Services.RegisterRepositories();
