@@ -1,0 +1,188 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Pelican Startup and Business Template</title>
+    <link rel="icon" href="~/startpage_assets/icons/favicon.png" type="image/png" sizes="16x16">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Pelican Multipurpose Startup Business Template">
+    <meta name="keywords" content="Pelican HTML Template, Pelican Startup Business Template, Startup Template">
+    <link href="~/startpage_assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900%7COpen+Sans:400" rel="stylesheet">
+    <link rel="stylesheet" href="~/startpage_assets/css/animate.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="~/startpage_assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/startpage_assets/css/owl.theme.css">
+    <link rel="stylesheet" href="~/startpage_assets/css/ionicons.min.css"> <!-- Resource style -->
+    <link href="~/startpage_assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Navbar Section -->
+       <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+            <div class="container container">
+                <a class="navbar-brand">Griffon</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navbar-right">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="@Url.Action("Login","Login", new { Area = "Admin" })">Login</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="@Url.Action("Register","Register", new { Area = "Admin" })">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav><!-- Navbar End -->
+ 
+        <div id="main" class="main">
+            <div class="hero">
+                <div class="container">
+                    <div class="row align-center">
+                        <div class="col-md-12 col-lg-5">
+                            <div class="hero-content">
+                                <h5 class="d-none d-sm-block">Hey There!</h5>
+                                <h2>How about designing your own personal blog?</h2>
+                                <p>A perfectly designed website where you can manage your blogs and express yourself.</p>
+                                <a class="btn-action" href="@Url.Action("Index","Home")">Live Preview</a>
+                                       
+                                
+        
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6 offset-lg-1">
+                            <img class="img-fluid" src="~/startpage_assets/images/hero.svg" alt="Hero">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="features" class="features">
+                <div class="container-m">
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <div class="features-intro">
+                                <h2>Welcome to Griffon, where data matters.</h2>
+                                <p>
+                                    We’ll Deliver the best stories and ideas on the topics you care about most straight to your
+                                    homepage, app, or inbox.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <div class="feature-list">
+                                <div class="card-icon">
+                                    <div class="card-img">
+                                        <img src="~/startpage_assets/icons/p1.png" width="60" alt="Feature">
+                                    </div>
+                                </div>
+                                <div class="card-text">
+                                    <h3>Fluid Layout</h3>
+                                    <p>Deliver the best stories and ideas on the topics you care about most straight to you.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <div class="feature-list">
+                                <div class="card-icon">
+                                    <div class="card-img">
+                                        <img src="~/startpage_assets/icons/p2.png" width="60" alt="Feature">
+                                    </div>
+                                </div>
+                                <div class="card-text">
+                                    <h3>Responsive</h3>
+                                    <p>Deliver the best stories and ideas on the topics you care about most straight to you.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <div class="feature-list">
+                                <div class="card-icon">
+                                    <div class="card-img">
+                                        <img src="~/startpage_assets/icons/p3.png" width="60" alt="Feature">
+                                    </div>
+                                </div>
+                                <div class="card-text">
+                                    <h3>Hyper threading</h3>
+                                    <p>Deliver the best stories and ideas on the topics you care about most straight to you.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <div class="feature-list">
+                                <div class="card-icon">
+                                    <div class="card-img">
+                                        <img src="~/startpage_assets/icons/p4.png" width="60" alt="Feature">
+                                    </div>
+                                </div>
+                                <div class="card-text">
+                                    <h3>User Friendly</h3>
+                                    <p>Deliver the best stories and ideas on the topics you care about most straight to you.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <div class="feature-list">
+                                <div class="card-icon">
+                                    <div class="card-img">
+                                        <img src="~/startpage_assets/icons/p5.png" width="60" alt="Feature">
+                                    </div>
+                                </div>
+                                <div class="card-text">
+                                    <h3> AI Algorithms</h3>
+                                    <p>Deliver the best stories and ideas on the topics you care about most straight to you.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <div class="feature-list">
+                                <div class="card-icon">
+                                    <div class="card-img">
+                                        <img src="~/startpage_assets/icons/p6.png" width="60" alt="Feature">
+                                    </div>
+                                </div>
+                                <div class="card-text">
+                                    <h3>Built-in Camera</h3>
+                                    <p>Deliver the best stories and ideas on the topics you care about most straight to you.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="buy" class="cta-sm">
+                <div class="container-m text-center">
+                    <div class="cta-content">
+                        <h4>WHAT ARE YOU WAITING FOR?</h4>
+                        <h1>Start now and turn your website into a profitable route.</h1>
+                        <a class="btn-action" href="@Url.Action("Register","Register", new { Area = "Admin" })">Get Started now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll To Top -->
+            <div id="back-top" class="bk-top">
+                <div class="bk-top-txt">
+                    <a class="back-to-top js-scroll-trigger" href="#main">Up</a>
+                </div>
+            </div>
+            <!-- Scroll To Top Ends-->
+
+        </div> <!-- Main -->
+    </div><!-- Wrapper -->
+    <!-- Jquery and Js Plugins -->
+    <script type="text/javascript" src="~/startpage_assets/js/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="~/startpage_assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="~/startpage_assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/startpage_assets/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="~/startpage_assets/js/plugins.js"></script>
+    <script type="text/javascript" src="~/startpage_assets/js/custom.js"></script>
+    <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+</body>
+</html>

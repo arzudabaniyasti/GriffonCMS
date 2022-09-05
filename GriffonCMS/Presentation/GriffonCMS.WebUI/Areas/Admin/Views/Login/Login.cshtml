@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_LoginRegisterLayout.cshtml";
+}
+
+<!-- Login -->
+<div class="page-links">
+    <a href="@Url.Action("Login","Login", new { Area = "Admin" })" class="active">Login</a><a href="@Url.Action("Register","Register", new { Area = "Admin" })">Register</a>
+</div>
+<form method="post">
+    <input class="form-control" type="email" name="EMail" placeholder="E-mail Address" required>
+    <input class="form-control" type="password" name="Password" placeholder="Password" required>
+    <div class="form-button">
+        <button id="submit" type="submit" class="ibtn"> Login</button>
+    </div>
+</form>
+<div class="other-links">
+    <span>Or login with</span><a href="#">Facebook</a><a href="#">Google</a><a href="#">Linkedin</a>
+</div>
