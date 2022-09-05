@@ -16,7 +16,7 @@ public class ErrorDataResult<T> : DataResult<T>
     {
     }
 
-    public ErrorDataResult(string message) : base(default, true, message)
+    public ErrorDataResult(string message) : base(default, false, message)
     {
     }
 }
