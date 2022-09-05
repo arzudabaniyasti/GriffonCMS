@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GriffonCMS.Application.Utils;
-public class MediatRAssemblyReference
+namespace GriffonCMS.Infrastructure.Maps.Categories;
+internal class CategoryMap
 {
 }
