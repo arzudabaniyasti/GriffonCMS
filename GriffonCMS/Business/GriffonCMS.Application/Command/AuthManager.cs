@@ -11,7 +11,7 @@ using GriffonCMS.Infrastructure.Utils.Results;
 using GriffonCMS.Infrastructure.Utils.Security.Jwt;
 
 
-namespace GriffonCMS.Application.Manager;
+namespace GriffonCMS.Application.Command;
 public class AuthManager : IAuthService
 {
     IAdminService _adminService;

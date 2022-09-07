@@ -15,13 +15,14 @@ using Business.DependencyResolvers.Autofac;
 using GriffonCMS.Infrastructure.Utils.Security.Jwt;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using GriffonCMS.Infrastructure.Utils.Security.Encryption;
+using GriffonCMS.Application.Command.Categories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddMediatR(typeof(MediatRAssemblyReference).Assembly);
-
+builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+builder.Services.AddMediatR(typeof(CreateCategoryCommandHandler).GetTypeInfo().Assembly);
 
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 

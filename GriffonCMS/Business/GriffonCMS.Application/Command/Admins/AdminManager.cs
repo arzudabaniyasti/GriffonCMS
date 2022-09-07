@@ -7,7 +7,7 @@ using GriffonCMS.Application.Interfaces.Repositories;
 using GriffonCMS.Domain.Entities.Admin;
 using GriffonCMS.Domain.Repositories;
 
-namespace GriffonCMS.Application.Manager.Admins;
+namespace GriffonCMS.Application.Command.Admins;
 public class AdminManager : IAdminService
 {
     IAdminRepository _adminRepository;

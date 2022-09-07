@@ -1,8 +1,8 @@
 ﻿using Autofac;
 using GriffonCMS.Application.Interfaces;
 using GriffonCMS.Application.Interfaces.Repositories;
-using GriffonCMS.Application.Manager;
-using GriffonCMS.Application.Manager.Admins;
+using GriffonCMS.Application.Command;
+using GriffonCMS.Application.Command.Admins;
 using GriffonCMS.Core.Repositories;
 using GriffonCMS.Domain.Repositories;
 using GriffonCMS.Infrastructure.Utils.Security.Jwt;

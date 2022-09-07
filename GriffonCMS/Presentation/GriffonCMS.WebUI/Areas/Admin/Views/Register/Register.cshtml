@@ -2,18 +2,40 @@
     ViewData["Title"] = "Register";
     Layout = "~/Views/Shared/_LoginRegisterLayout.cshtml";
 }
-
-<div class="page-links">
-    <a href="@Url.Action("Login","Login", new { Area = "Admin" })">Login</a><a href="@Url.Action("Register","Register", new { Area = "Admin" })" class="active">Register</a>
-</div>
-<form method="post">
-    <input class="form-control" type="text" name="FullName" placeholder="Full Name" required>
-    <input class="form-control" type="email" name="EMail" placeholder="E-mail Address" required>
-    <input class="form-control" type="password" name="Password" placeholder="Password" required>
-    <div class="form-button">
-        <button id="submit" type="submit" class="ibtn">Register</button>
+<div class="row">
+    <div class="img-holder">
+        <div class="bg"></div>
+        <div class="info-holder">
+            <h3>Welcome! Sign up and start designing your own blog..</h3>
+            <p>Access to the most powerfull tool in the entire design and web industry.</p>
+            <img src="~/admin_assets/images/register.png" alt="">
+        </div>
     </div>
-</form>
-<div class="other-links">
-    <span>Or register with</span><a href="#">Facebook</a><a href="#">Google</a><a href="#">Linkedin</a>
+    <div class="form-holder">
+        <div class="form-content">
+            <div class="form-items">
+                <div class="website-logo-inside">
+                    <a href="index.html">
+                        <div class="logo">
+                            <img class="logo-size" src="~/admin_assets/images/logo-light.svg" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="page-links">
+                    <a href="@Url.Action("Login","Login", new { Area = "Admin" })">Login</a><a href="@Url.Action("Register","Register", new { Area = "Admin" })" class="active">Register</a>
+                </div>
+                <form method="post">
+                    <input class="form-control" type="text" name="FullName" placeholder="Full Name" required>
+                    <input class="form-control" type="email" name="EMail" placeholder="E-mail Address" required>
+                    <input class="form-control" type="password" name="Password" placeholder="Password" required>
+                    <div class="form-button">
+                        <button id="submit" type="submit" class="ibtn">Register</button>
+                    </div>
+                </form>
+                <div class="other-links">
+                    <span>Or register with</span><a href="#">Facebook</a><a href="#">Google</a><a href="#">Linkedin</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,20 +1,28 @@
 
+using System.Reflection;
 using Autofac;
+using Autofac.Core;
 using Autofac.Extensions.DependencyInjection;
 using Business.DependencyResolvers.Autofac;
+using GriffonCMS.Application.Command.Categories;
 using GriffonCMS.Core.Context.EFContext;
+using GriffonCMS.Infrastructure.Registrations;
 using GriffonCMS.Infrastructure.Utils.Security.Encryption;
 using GriffonCMS.Infrastructure.Utils.Security.Jwt;
+using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+builder.Services.AddMediatR(typeof(CreateCategoryCommandHandler).GetTypeInfo().Assembly);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.RegisterAutoMapper();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<GriffonEFContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("GriffonSQLServer")));
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())

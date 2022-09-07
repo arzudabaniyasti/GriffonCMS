@@ -1,5 +1,5 @@
 ﻿using GriffonCMS.Application.Interfaces;
-using GriffonCMS.Application.Manager.Admins;
+using GriffonCMS.Application.Command.Admins;
 using GriffonCMS.Infrastructure.DTOS.Account;
 using GriffonCMS.WebUI.Controllers.Base;
 using MediatR;
