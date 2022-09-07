@@ -5,8 +5,18 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using GriffonCMS.Infrastructure.Maps.Abouts;
+using GriffonCMS.Infrastructure.Maps.Blogs;
 using GriffonCMS.Infrastructure.Maps.Categories;
+using GriffonCMS.Infrastructure.Maps.Comments;
+using GriffonCMS.Infrastructure.Maps.Contacts;
+using GriffonCMS.Infrastructure.Maps.Interests;
+using GriffonCMS.Infrastructure.Maps.Projects;
+using GriffonCMS.Infrastructure.Maps.References;
+using GriffonCMS.Infrastructure.Maps.Skills;
 using GriffonCMS.Infrastructure.Maps.Tags;
+using GriffonCMS.Infrastructure.Maps.Users;
+using GriffonCMS.Infrastructure.Maps.WorkExperience;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -20,6 +30,16 @@ public static class AutoMapperRegister
             //startupda da eklicez buraya da eklicez.
             cfg.AddProfile(new TagMap());
             cfg.AddProfile(new CategoryMap());
+            cfg.AddProfile(new UserMap());
+            cfg.AddProfile(new ContactMap());
+            cfg.AddProfile(new BlogMap());
+            cfg.AddProfile(new CommentMap());
+            cfg.AddProfile(new InterestMap());
+            cfg.AddProfile(new ProjectMap());
+            cfg.AddProfile(new ReferenceMap());
+            cfg.AddProfile(new SkillMap());
+            cfg.AddProfile(new WorkExperienceMap());
+            cfg.AddProfile(new AboutMap());
         });
 
         var mapper = config.CreateMapper();

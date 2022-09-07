@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 using GriffonCMS.Domain.Entities.Admin;
 
 namespace GriffonCMS.Application.Interfaces.Repositories;
-public interface IAdminService : IGenericRepositoryAsync<AdminEntity>
+public interface IAdminService
 {
     AdminEntity GetByMail(string email);
+    void AddAsync(AdminEntity entity);
+    void UpdateAsync(AdminEntity entity);
 }

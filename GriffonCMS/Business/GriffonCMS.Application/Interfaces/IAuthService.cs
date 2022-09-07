@@ -11,7 +11,7 @@ using GriffonCMS.Domain.Entities.Admin;
 namespace GriffonCMS.Application.Interfaces;
 public interface IAuthService
 {
-    IDataResult<AdminEntity> Register(RegisterRequest registerRequest,string password);
+    IDataResult<AdminEntity> Register(RegisterRequest registerRequest);
     IDataResult<AdminEntity> Login(LoginRequest loginRequest);
     IResult UserExists(string email);
     IDataResult<AccessToken> CreateAccessToken(AdminEntity admin);

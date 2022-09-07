@@ -30,7 +30,7 @@ public class RegisterController : BaseController
         {
             return View();
         }
-        var registerResult = _authService.Register(registerRequest, registerRequest.Password);
+        var registerResult = _authService.Register(registerRequest);
         var result = _authService.CreateAccessToken(registerResult.Data);
         if (result.Success)
         {

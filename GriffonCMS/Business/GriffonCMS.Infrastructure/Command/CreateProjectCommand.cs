@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GriffonCMS.Domain.Entities.Category;
 using MediatR;
 
 namespace GriffonCMS.Infrastructure.Command;
-public class CreateCategoryCommand:IRequest<Guid>
+public class CreateProjectCommand : IRequest<Guid>
 {
-    //public Guid BlogId { get; set; }
-    public String CategoryName { get; set; }
-} 
+    public DateTime Date { get; set; }
+
+    public string Description { get; set; }
+}

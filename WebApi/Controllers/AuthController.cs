@@ -37,7 +37,7 @@ public class AuthController : ControllerBase
         {
             return BadRequest(userExists.Message);
         }
-        var registerResult = _authService.Register(registerRequest,registerRequest.Password);
+        var registerResult = _authService.Register(registerRequest);
         var result = _authService.CreateAccessToken(registerResult.Data);
         if (result.Success)
         {
