@@ -1,4 +1,5 @@
-﻿using GriffonCMS.Infrastructure.Command;
+﻿
+using GriffonCMS.Infrastructure.Command.Skills;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,5 +22,10 @@ public class SkillController : ControllerBase
     public async Task<IActionResult> Post(CreateSkillCommand command)
     {
         return Ok(await Mediator.Send(command));
+    }
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(Guid id)
+    {
+        return Ok(await Mediator.Send(new DeleteSkillByIdCommand { Id = id }));
     }
 }

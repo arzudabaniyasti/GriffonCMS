@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using GriffonCMS.Domain.Entities.Comments;
 using MediatR;
 
-namespace GriffonCMS.Infrastructure.Command;
+namespace GriffonCMS.Infrastructure.Command.Blogs;
 public class CreateBlogCommand : IRequest<Guid>
 {
     public Guid CategoryId { get; set; }

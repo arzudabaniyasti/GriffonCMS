@@ -1,4 +1,4 @@
-﻿using GriffonCMS.Infrastructure.Command;
+﻿using GriffonCMS.Infrastructure.Command.Users;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,9 +17,9 @@ public class UserController : ControllerBase
     }
     protected IMediator Mediator => _mediator ??= HttpContext.RequestServices.GetService<IMediator>();
 
-    [HttpPost]
-    public async Task<IActionResult> Post(CreateUserCommand command)
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(Guid id)
     {
-        return Ok(await Mediator.Send(command));
+        return Ok(await Mediator.Send(new DeleteUserByIdCommand { Id = id }));
     }
 }

@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using MediatR;
 
-namespace GriffonCMS.Infrastructure.Command;
-public class CreateUserCommand : IRequest<Guid>
+namespace GriffonCMS.Infrastructure.Command.Users;
+public class DeleteUserByIdCommand : IRequest<Guid>
 {
-    public Guid AdminId;
+    public Guid Id { get; set; }
 }

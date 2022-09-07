@@ -4,16 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using GriffonCMS.Domain.Entities.About;
 using GriffonCMS.Domain.Entities.Category;
 using GriffonCMS.Domain.Entities.Tag;
-using GriffonCMS.Infrastructure.Command;
-using GriffonCMS.Infrastructure.DTOS.Tags;
+using GriffonCMS.Domain.Entities.User;
+using GriffonCMS.Infrastructure.Command.Users;
+
 
 namespace GriffonCMS.Infrastructure.Maps.Users;
 public class UserMap : Profile
 {
     public UserMap()
     {
-       // CreateMap<CategoryEntity, CreateCategoryCommand>().ReverseMap();
+        //CreateMap<CategoryEntity, CreateCategoryCommand>().ReverseMap();
+        CreateMap<UserEntity, DeleteUserByIdCommand>().ReverseMap();
     }
 }

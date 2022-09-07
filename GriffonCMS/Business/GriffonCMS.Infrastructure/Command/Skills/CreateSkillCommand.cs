@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MediatR;
 
-namespace GriffonCMS.Infrastructure.Command;
+namespace GriffonCMS.Infrastructure.Command.Skills;
 public class CreateSkillCommand : IRequest<Guid>
 {
     public string SkillName { get; set; }

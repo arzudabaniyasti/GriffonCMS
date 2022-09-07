@@ -9,6 +9,7 @@ using GriffonCMS.Domain.Entities.User;
 using GriffonCMS.Domain.Entities.WorkExperience;
 using GriffonCMS.Domain.Repositories;
 using GriffonCMS.Infrastructure.Command;
+using GriffonCMS.Infrastructure.Command.WorkExperiences;
 using MediatR;
 
 namespace GriffonCMS.Application.Command.WorkExperiences;
