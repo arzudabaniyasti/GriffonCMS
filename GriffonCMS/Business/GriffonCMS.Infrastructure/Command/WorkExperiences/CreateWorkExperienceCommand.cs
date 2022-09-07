@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MediatR;
 
-namespace GriffonCMS.Infrastructure.Command;
+namespace GriffonCMS.Infrastructure.Command.WorkExperiences;
 public class CreateWorkExperienceCommand : IRequest<Guid>
 {
     public DateTime StartDate { get; set; }

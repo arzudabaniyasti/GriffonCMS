@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GriffonCMS.Core.Migrations
 {
     [DbContext(typeof(GriffonEFContext))]
-    [Migration("20220907132719_first_migration")]
-    partial class first_migration
+    [Migration("20220907202046_[migrationName]")]
+    partial class migrationName
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

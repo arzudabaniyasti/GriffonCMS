@@ -1,4 +1,5 @@
 ﻿using GriffonCMS.Infrastructure.Command;
+using GriffonCMS.Infrastructure.Command.Abouts;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,5 +21,10 @@ public class AboutController : ControllerBase
     public async Task<IActionResult> Post(CreateAboutCommand command)
     {
         return Ok(await Mediator.Send(command));
+    }
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(Guid id)
+    {
+        return Ok(await Mediator.Send(new DeleteAboutByIdCommand { Id = id }));
     }
 }

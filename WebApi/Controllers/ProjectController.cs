@@ -1,4 +1,4 @@
-﻿using GriffonCMS.Infrastructure.Command;
+﻿using GriffonCMS.Infrastructure.Command.Projects;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,5 +21,10 @@ public class ProjectController : ControllerBase
     public async Task<IActionResult> Post(CreateProjectCommand command)
     {
         return Ok(await Mediator.Send(command));
+    }
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(Guid id)
+    {
+        return Ok(await Mediator.Send(new DeleteProjectByIdCommand { Id = id }));
     }
 }

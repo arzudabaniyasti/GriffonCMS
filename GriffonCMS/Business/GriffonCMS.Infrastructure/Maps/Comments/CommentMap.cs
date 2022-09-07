@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using GriffonCMS.Domain.Entities.About;
 using GriffonCMS.Domain.Entities.Category;
 using GriffonCMS.Domain.Entities.Comments;
-using GriffonCMS.Infrastructure.Command;
+using GriffonCMS.Infrastructure.Command.Abouts;
+using GriffonCMS.Infrastructure.Command.Comments;
 
 namespace GriffonCMS.Infrastructure.Maps.Comments;
 public class CommentMap : Profile
@@ -14,5 +16,6 @@ public class CommentMap : Profile
     public CommentMap()
     {
         CreateMap<CommentEntity, CreateCommentCommand>().ReverseMap();
+        CreateMap<CommentEntity, DeleteCommentByIdCommand>().ReverseMap();
     }
 }

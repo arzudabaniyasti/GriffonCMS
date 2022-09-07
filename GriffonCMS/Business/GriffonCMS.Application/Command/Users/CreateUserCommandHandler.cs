@@ -8,6 +8,7 @@ using GriffonCMS.Domain.Entities.Category;
 using GriffonCMS.Domain.Entities.User;
 using GriffonCMS.Domain.Repositories;
 using GriffonCMS.Infrastructure.Command;
+using GriffonCMS.Infrastructure.Command.Users;
 using MediatR;
 
 namespace GriffonCMS.Application.Command.Users;

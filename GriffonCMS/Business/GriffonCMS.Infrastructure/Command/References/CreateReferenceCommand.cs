@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MediatR;
 
-namespace GriffonCMS.Infrastructure.Command;
+namespace GriffonCMS.Infrastructure.Command.References;
 public class CreateReferenceCommand : IRequest<Guid>
 {
     public string ReferenceFullName { get; set; }

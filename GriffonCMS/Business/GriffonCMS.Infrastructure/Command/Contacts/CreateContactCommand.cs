@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MediatR;
 
-namespace GriffonCMS.Infrastructure.Command;
+namespace GriffonCMS.Infrastructure.Command.Contacts;
 public class CreateContactCommand : IRequest<Guid>
 {
     public string ContactMail { get; set; }

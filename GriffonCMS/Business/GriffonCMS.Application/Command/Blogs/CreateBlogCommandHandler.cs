@@ -8,6 +8,7 @@ using AutoMapper;
 using GriffonCMS.Domain.Entities.Blog;
 using GriffonCMS.Domain.Repositories;
 using GriffonCMS.Infrastructure.Command;
+using GriffonCMS.Infrastructure.Command.Blogs;
 using MediatR;
 
 namespace GriffonCMS.Application.Command.Blogs;

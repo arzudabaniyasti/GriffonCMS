@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MediatR;
 
-namespace GriffonCMS.Infrastructure.Command;
+namespace GriffonCMS.Infrastructure.Command.Comments;
 public class CreateCommentCommand : IRequest<Guid>
 {
     public Guid BlogId { get; set; }

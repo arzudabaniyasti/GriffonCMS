@@ -7,6 +7,7 @@ using AutoMapper;
 using GriffonCMS.Domain.Entities.About;
 using GriffonCMS.Domain.Repositories;
 using GriffonCMS.Infrastructure.Command;
+using GriffonCMS.Infrastructure.Command.Abouts;
 using MediatR;
 
 namespace GriffonCMS.Application.Command.Abouts;

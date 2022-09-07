@@ -9,6 +9,7 @@ using GriffonCMS.Domain.Entities.Reference;
 using GriffonCMS.Domain.Entities.Skill;
 using GriffonCMS.Domain.Repositories;
 using GriffonCMS.Infrastructure.Command;
+using GriffonCMS.Infrastructure.Command.Skills;
 using MediatR;
 
 namespace GriffonCMS.Application.Command.Skills;

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace GriffonCMS.Core.Migrations
 {
-    public partial class first_migration : Migration
+    public partial class migrationName : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -9,6 +9,7 @@ using GriffonCMS.Core.Repositories;
 using GriffonCMS.Domain.Entities.Category;
 using GriffonCMS.Domain.Repositories;
 using GriffonCMS.Infrastructure.Command;
+using GriffonCMS.Infrastructure.Command.Categories;
 using MediatR;
 
 namespace GriffonCMS.Application.Command.Categories;

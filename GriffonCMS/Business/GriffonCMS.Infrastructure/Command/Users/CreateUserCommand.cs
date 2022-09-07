@@ -5,9 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using MediatR;
 
-namespace GriffonCMS.Infrastructure.Command;
-public class CreateAboutCommand : IRequest<Guid>
+namespace GriffonCMS.Infrastructure.Command.Users;
+public class CreateUserCommand : IRequest<Guid>
 {
-    public string Content { get; set; }
-   
+    public Guid AdminId;
 }

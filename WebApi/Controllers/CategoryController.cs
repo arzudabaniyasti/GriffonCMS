@@ -1,4 +1,6 @@
-﻿using GriffonCMS.Infrastructure.Command;
+﻿
+using GriffonCMS.Infrastructure.Command;
+using GriffonCMS.Infrastructure.Command.Categories;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,7 +23,11 @@ public class CategoryController : ControllerBase
     {
         return Ok(await Mediator.Send(command));
     }
-
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(Guid id)
+    {
+        return Ok(await Mediator.Send(new DeleteCategoryByIdCommand { Id = id }));
+    }
 
 
 }

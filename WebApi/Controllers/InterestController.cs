@@ -1,4 +1,6 @@
-﻿using GriffonCMS.Infrastructure.Command;
+﻿
+using GriffonCMS.Infrastructure.Command.Contacts;
+using GriffonCMS.Infrastructure.Command.Interests;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,5 +24,10 @@ public class InterestController : ControllerBase
     public async Task<IActionResult> Post(CreateInterestCommand command)
     {
         return Ok(await Mediator.Send(command));
+    }
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(Guid id)
+    {
+        return Ok(await Mediator.Send(new DeleteContactByIdCommand { Id = id }));
     }
 }

@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using MediatR;
 
-namespace GriffonCMS.Infrastructure.Command;
-public class CreateCategoryCommand:IRequest<Guid>
+namespace GriffonCMS.Infrastructure.Command.Categories;
+public class CreateCategoryCommand : IRequest<Guid>
 {
     //public Guid BlogId { get; set; }
-    public String CategoryName { get; set; }
-} 
+    public string CategoryName { get; set; }
+}

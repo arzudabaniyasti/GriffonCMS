@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 using MediatR;
 
 namespace GriffonCMS.Infrastructure.Command;
-public class CreateInterestCommand : IRequest<Guid>
+public class DeleteWorkExperienceByIdCommand : IRequest<Guid>
 {
-    public string InterestName { get; set; }
-    public string InterestContent { get; set; }
+    public Guid Id { get; set; }
 }

@@ -1,4 +1,5 @@
-﻿using GriffonCMS.Infrastructure.Command;
+﻿
+using GriffonCMS.Infrastructure.Command.Comments;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,5 +22,10 @@ public class CommentController : ControllerBase
     public async Task<IActionResult> Post(CreateCommentCommand command)
     {
         return Ok(await Mediator.Send(command));
+    }
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(Guid id)
+    {
+        return Ok(await Mediator.Send(new DeleteCommentByIdCommand { Id = id }));
     }
 }

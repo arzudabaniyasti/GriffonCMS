@@ -38,6 +38,18 @@ builder.Services.AddMediatR(typeof(CreateUserCommandHandler).GetTypeInfo().Assem
 builder.Services.AddMediatR(typeof(CreateWorkExperienceCommandHandler).GetTypeInfo().Assembly);
 builder.Services.AddMediatR(typeof(CreateAboutCommandHandler).GetTypeInfo().Assembly);
 
+builder.Services.AddMediatR(typeof(DeleteCategoryByIdCommandHandler).GetTypeInfo().Assembly);
+builder.Services.AddMediatR(typeof(DeleteBlogByIdCommandHandler).GetTypeInfo().Assembly);
+builder.Services.AddMediatR(typeof(DeleteCommentByIdCommandHandler).GetTypeInfo().Assembly);
+builder.Services.AddMediatR(typeof(DeleteContactByIdCommandHandler).GetTypeInfo().Assembly);
+builder.Services.AddMediatR(typeof(DeleteInterestByIdCommandHandler).GetTypeInfo().Assembly);
+builder.Services.AddMediatR(typeof(DeleteProjectByIdCommandHandler).GetTypeInfo().Assembly);
+builder.Services.AddMediatR(typeof(DeleteReferenceByIdCommandHandler).GetTypeInfo().Assembly);
+builder.Services.AddMediatR(typeof(DeleteSkillByIdCommandHandler).GetTypeInfo().Assembly);
+builder.Services.AddMediatR(typeof(DeleteUserByIdCommandHandler).GetTypeInfo().Assembly);
+builder.Services.AddMediatR(typeof(DeleteWorkExperienceByIdCommandHandler).GetTypeInfo().Assembly);
+builder.Services.AddMediatR(typeof(DeleteAboutByIdCommandHandler).GetTypeInfo().Assembly);
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
