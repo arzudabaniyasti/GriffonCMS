@@ -12,7 +12,7 @@ public class TagMap : Profile
 {
     public TagMap()
     {
-        CreateMap<Tag, GetTagDto>();
-        CreateMap<GetTagDto, Tag>();
+        CreateMap<TagEntity, GetTagDto>();
+        CreateMap<GetTagDto, TagEntity>();
     }
 }

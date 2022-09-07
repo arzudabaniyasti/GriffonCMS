@@ -5,13 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using GriffonCMS.Core.Context.EFContext;
 using GriffonCMS.Core.Repositories.Base;
-using GriffonCMS.Domain.Entities.Category;
+using GriffonCMS.Domain.Entities.About;
 using GriffonCMS.Domain.Repositories;
 
 namespace GriffonCMS.Core.Repositories;
-public class CategoryRepository : BaseRepository<CategoryEntity, Guid>, ICategoryRepository
+public class AboutRepository : BaseRepository<AboutEntity, Guid>, IAboutRepository
 {
-    public CategoryRepository(GriffonEFContext dbContext) : base(dbContext)
+    public AboutRepository(GriffonEFContext dbContext) : base(dbContext)
     {
     }
+
 }

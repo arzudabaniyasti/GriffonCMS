@@ -16,17 +16,17 @@ public class AdminManager : IAdminService
         _adminRepository = adminRepository;
     }
 
-    public void AddAsync(Admin entity)
+    public void AddAsync(AdminEntity entity)
     {
        _adminRepository.AddAsync(entity);
     }
 
-    public Admin GetByMail(string email)
+    public AdminEntity GetByMail(string email)
     {
         return _adminRepository.Get(u => u.EMail == email);
     }
 
-    public void UpdateAsync(Admin entity)
+    public void UpdateAsync(AdminEntity entity)
     {
         _adminRepository.Update(entity);
     }

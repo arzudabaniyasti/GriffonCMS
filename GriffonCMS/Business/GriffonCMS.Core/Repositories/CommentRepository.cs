@@ -5,13 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using GriffonCMS.Core.Context.EFContext;
 using GriffonCMS.Core.Repositories.Base;
-using GriffonCMS.Domain.Entities.Category;
+using GriffonCMS.Domain.Entities.Blog;
+using GriffonCMS.Domain.Entities.Comments;
 using GriffonCMS.Domain.Repositories;
 
 namespace GriffonCMS.Core.Repositories;
-public class CategoryRepository : BaseRepository<CategoryEntity, Guid>, ICategoryRepository
+public class CommentRepository : AuditableBaseRepository<CommentEntity, Guid>, ICommentRepository
 {
-    public CategoryRepository(GriffonEFContext dbContext) : base(dbContext)
+    public CommentRepository(GriffonEFContext dbContext) : base(dbContext)
     {
     }
+
 }

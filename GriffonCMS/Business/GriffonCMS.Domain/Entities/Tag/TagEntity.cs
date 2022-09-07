@@ -2,8 +2,9 @@
 
 namespace GriffonCMS.Domain.Entities.Tag
 {
-    public class Tag : BaseEntity<Guid>
+    public class TagEntity : BaseEntity<Guid>
     {
         public string TagValue { get; set; }
+        
     }
 }

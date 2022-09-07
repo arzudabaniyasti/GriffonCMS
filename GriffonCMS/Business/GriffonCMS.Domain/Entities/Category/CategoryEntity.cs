@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using GriffonCMS.Domain.Entities.Base;
 
 namespace GriffonCMS.Domain.Entities.Category;
-public class Category : BaseEntity<Guid>
+public class CategoryEntity : BaseEntity<Guid>
 {
+    public Guid UserId { get; set; }
     public string CategoryName { get; set; }    
 }

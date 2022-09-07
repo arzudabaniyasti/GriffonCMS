@@ -24,7 +24,7 @@ public class CreateCategoryCommandHandler : IRequestHandler<CreateCategoryComman
     }
     public async Task<Guid> Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
     {
-            var category = _mapper.Map<Category>(request);
+            var category = _mapper.Map<CategoryEntity>(request);
             await _categoryRepository.AddAsync(category);
             return category.Id;
         }

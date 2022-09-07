@@ -8,6 +8,6 @@ using GriffonCMS.Domain.Entities.Admin;
 namespace GriffonCMS.Infrastructure.Utils.Security.Jwt;
 public interface ITokenHelper
 {
-    AccessToken CreateToken(Admin Admin);
+    AccessToken CreateToken(AdminEntity Admin);
     //token üretimi gerçekleştirecek helper
 }
