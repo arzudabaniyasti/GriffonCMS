@@ -25,7 +25,7 @@ public class JwtHelper : ITokenHelper
         _tokenOptions = _configuration.GetSection("TokenOptions").Get<TokenOptions>();
         _accessTokenExpirations = DateTime.Now.AddMinutes(_tokenOptions.AccessTokenExpiration);
     }
-    public AccessToken CreateToken(Admin admin)
+    public AccessToken CreateToken(AdminEntity admin)
     {
         var securityKey = SecurityKeyHelper.CreateSecurityKey(_tokenOptions.SecurityKey);
         var signingCredentials=SigningCredentialsHelper.CreateSigningCredentials(securityKey);
@@ -39,7 +39,7 @@ public class JwtHelper : ITokenHelper
         };
     }
     //tokenın expiration süresi şuandan önceyse geçerli değil notBefore
-    public JwtSecurityToken CreateJwtSecurityToken(TokenOptions tokenOptions,Admin admin,SigningCredentials signingCredentials)
+    public JwtSecurityToken CreateJwtSecurityToken(TokenOptions tokenOptions,AdminEntity admin,SigningCredentials signingCredentials)
     {
         var jwt= new JwtSecurityToken(
             issuer: tokenOptions.Issuer,
@@ -50,7 +50,7 @@ public class JwtHelper : ITokenHelper
         );
         return jwt;
     }
-    private IEnumerable<Claim> SetClaims(Admin admin)
+    private IEnumerable<Claim> SetClaims(AdminEntity admin)
     {
         var claims = new List<Claim>();
         claims.AddNameIdentifier(admin.Id.ToString());

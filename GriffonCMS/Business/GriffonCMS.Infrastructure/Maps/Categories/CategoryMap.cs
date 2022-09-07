@@ -14,7 +14,7 @@ public class CategoryMap : Profile
 {
     public CategoryMap()
     {
-       CreateMap<Category,CreateCategoryCommand>().ReverseMap();
+       CreateMap<CategoryEntity,CreateCategoryCommand>().ReverseMap();
     }
 }
 

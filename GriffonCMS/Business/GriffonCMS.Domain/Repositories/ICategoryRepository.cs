@@ -7,6 +7,6 @@ using GriffonCMS.Domain.Entities.Category;
 using GriffonCMS.Domain.Repositories.Base.Abstract;
 
 namespace GriffonCMS.Domain.Repositories;
-public interface ICategoryRepository : IBaseRepository<Category, Guid>
+public interface ICategoryRepository : IBaseRepository<CategoryEntity, Guid>
 {
 }

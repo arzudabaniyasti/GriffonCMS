@@ -1,14 +1,18 @@
-﻿using System.Linq.Expressions;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Text;
+using System.Threading.Tasks;
 using GriffonCMS.Core.Context.EFContext;
 using GriffonCMS.Domain.Entities.Base;
 using GriffonCMS.Domain.Repositories.Base.Abstract;
 using Microsoft.EntityFrameworkCore;
 
 namespace GriffonCMS.Core.Repositories.Base;
-
-public class BaseRepository<TEntity, TPK> : IBaseRepository<TEntity, TPK>
+public class AuditableBaseRepository<TEntity, TPK> : IBaseRepository<TEntity, TPK>
     where TPK : notnull
-    where TEntity : BaseEntity<TPK> 
+    where TEntity: AuditableBaseEntity<TPK>
 {
     #region Props
     private readonly GriffonEFContext _dbContext;
@@ -16,7 +20,7 @@ public class BaseRepository<TEntity, TPK> : IBaseRepository<TEntity, TPK>
     #endregion
 
     #region Methods
-    public BaseRepository(GriffonEFContext dbContext)
+    public AuditableBaseRepository(GriffonEFContext dbContext)
     {
         _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         _dbSet = _dbContext.Set<TEntity>();
@@ -87,9 +91,8 @@ public class BaseRepository<TEntity, TPK> : IBaseRepository<TEntity, TPK>
 
     public TEntity Get(Expression<Func<TEntity, bool>> filter)
     {
-       
-            return _dbContext.Set<TEntity>().SingleOrDefault(filter);
-        }
-    }
- #endregion
 
+        return _dbContext.Set<TEntity>().SingleOrDefault(filter);
+    }
+}
+#endregion

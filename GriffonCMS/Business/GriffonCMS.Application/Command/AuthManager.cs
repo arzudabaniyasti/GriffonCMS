@@ -22,49 +22,49 @@ public class AuthManager : IAuthService
         _tokenHelper = tokenHelper;
     }
 
-    public IDataResult<AccessToken> CreateAccessToken(Admin admin)
+    public IDataResult<AccessToken> CreateAccessToken(AdminEntity admin)
     {
         var accessToken = _tokenHelper.CreateToken(admin);
         return new SuccessDataResult<AccessToken>(accessToken,"Access token created");
     }
 
-    public IDataResult<Admin> Login(LoginRequest loginRequest)
+    public IDataResult<AdminEntity> Login(LoginRequest loginRequest)
     {
         var adminToCheck = _adminService.GetByMail(loginRequest.Email);
         if (adminToCheck == null)
         {
-            return new ErrorDataResult<Admin>("email eşleşmedi user not found");
+            return new ErrorDataResult<AdminEntity>("email eşleşmedi user not found");
         }
         if(!(adminToCheck.Password == loginRequest.Password))
         {
-            return new ErrorDataResult<Admin>("Password eşleşmedi");
+            return new ErrorDataResult<AdminEntity>("Password eşleşmedi");
         }
-        return new SuccessDataResult<Admin>(adminToCheck,"Login success");
+        return new SuccessDataResult<AdminEntity>(adminToCheck,"Login success");
 
     }
 
-    public IDataResult<Admin> Register(RegisterRequest registerRequest)
+    public IDataResult<AdminEntity> Register(RegisterRequest registerRequest)
     {
-        var admin = new Admin
+        var admin = new AdminEntity
         {
             EMail = registerRequest.Email,
             FullName = registerRequest.FullName,
             Password = registerRequest.Password
         };
         _adminService.AddAsync(admin);
-        return new SuccessDataResult<Admin>(admin,"register success");
+        return new SuccessDataResult<AdminEntity>(admin,"register success");
     }
 
-    public IDataResult<Admin> Register(RegisterRequest registerRequest, string password)
+    public IDataResult<AdminEntity> Register(RegisterRequest registerRequest, string password)
     {
-        var admin = new Admin
+        var admin = new AdminEntity
         {
             EMail = registerRequest.Email,
             FullName = registerRequest.FullName,
             Password = password
         };
         _adminService.AddAsync(admin);
-        return new SuccessDataResult<Admin>(admin, "register success");
+        return new SuccessDataResult<AdminEntity>(admin, "register success");
     }
 
     public IResult UserExists(string email)

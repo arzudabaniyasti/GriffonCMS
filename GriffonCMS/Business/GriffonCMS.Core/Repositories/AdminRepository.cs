@@ -9,7 +9,7 @@ using GriffonCMS.Domain.Entities.Admin;
 using GriffonCMS.Domain.Repositories;
 
 namespace GriffonCMS.Core.Repositories;
-public class AdminRepository : BaseRepository<Admin, Guid>,IAdminRepository
+public class AdminRepository : BaseRepository<AdminEntity, Guid>,IAdminRepository
 {
     public AdminRepository(GriffonEFContext dbContext) : base(dbContext)
     {
