@@ -1,10 +1,19 @@
-
 using System.Reflection;
 using Autofac;
 using Autofac.Core;
 using Autofac.Extensions.DependencyInjection;
 using Business.DependencyResolvers.Autofac;
+using GriffonCMS.Application.Command.Abouts;
+using GriffonCMS.Application.Command.Blogs;
 using GriffonCMS.Application.Command.Categories;
+using GriffonCMS.Application.Command.Comments;
+using GriffonCMS.Application.Command.Contacts;
+using GriffonCMS.Application.Command.Interests;
+using GriffonCMS.Application.Command.Projects;
+using GriffonCMS.Application.Command.References;
+using GriffonCMS.Application.Command.Skills;
+using GriffonCMS.Application.Command.Users;
+using GriffonCMS.Application.Command.WorkExperiences;
 using GriffonCMS.Core.Context.EFContext;
 using GriffonCMS.Infrastructure.Registrations;
 using GriffonCMS.Infrastructure.Utils.Security.Encryption;
@@ -18,6 +27,16 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
 builder.Services.AddMediatR(typeof(CreateCategoryCommandHandler).GetTypeInfo().Assembly);
+builder.Services.AddMediatR(typeof(CreateBlogCommandHandler).GetTypeInfo().Assembly);
+builder.Services.AddMediatR(typeof(CreateCommentCommandHandler).GetTypeInfo().Assembly);
+builder.Services.AddMediatR(typeof(CreateContactCommandHandler).GetTypeInfo().Assembly);
+builder.Services.AddMediatR(typeof(CreateInterestCommandHandler).GetTypeInfo().Assembly);
+builder.Services.AddMediatR(typeof(CreateProjectCommandHandler).GetTypeInfo().Assembly);
+builder.Services.AddMediatR(typeof(CreateReferenceCommandHandler).GetTypeInfo().Assembly);
+builder.Services.AddMediatR(typeof(CreateSkillCommandHandler).GetTypeInfo().Assembly);
+builder.Services.AddMediatR(typeof(CreateUserCommandHandler).GetTypeInfo().Assembly);
+builder.Services.AddMediatR(typeof(CreateWorkExperienceCommandHandler).GetTypeInfo().Assembly);
+builder.Services.AddMediatR(typeof(CreateAboutCommandHandler).GetTypeInfo().Assembly);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -47,8 +66,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateLifetime = true,
             ValidIssuer = tokenOptions.Issuer,
             ValidAudience = tokenOptions.Audience,
-            ValidateIssuerSigningKey=true,
-            IssuerSigningKey=SecurityKeyHelper.CreateSecurityKey(tokenOptions.SecurityKey)
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = SecurityKeyHelper.CreateSecurityKey(tokenOptions.SecurityKey)
 
         };
 
@@ -61,7 +80,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    
+
 }
 app.UseCors(builder => builder.WithOrigins("http://localhost:3000").AllowAnyHeader());
 app.UseHttpsRedirection();

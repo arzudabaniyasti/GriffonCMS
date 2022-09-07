@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 using MediatR;
 
 namespace GriffonCMS.Infrastructure.Command;
-public class CreateCategoryCommand:IRequest<Guid>
+public class CreateSkillCommand : IRequest<Guid>
 {
-    //public Guid BlogId { get; set; }
-    public String CategoryName { get; set; }
-} 
+    public string SkillName { get; set; }
+    public int SkillLevel { get; set; }
+}

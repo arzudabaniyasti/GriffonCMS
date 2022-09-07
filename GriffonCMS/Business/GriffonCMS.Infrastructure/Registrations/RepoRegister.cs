@@ -18,5 +18,16 @@ public static class RepoRegister
         services.AddTransient(typeof(ITagRepository), typeof(TagRepository));
         services.AddTransient(typeof(IAdminRepository), typeof(AdminRepository));
         services.AddTransient(typeof(ICategoryRepository), typeof(CategoryRepository));
+        services.AddTransient(typeof(IUserRepository), typeof(UserRepository));
+        services.AddTransient(typeof(IAboutRepository), typeof(AboutRepository));
+        services.AddTransient(typeof(IBlogRepository), typeof(BlogRepository));
+        services.AddTransient(typeof(ICommentRepository), typeof(CommentRepository));
+        services.AddTransient(typeof(IContactRepository), typeof(ContactRepository));
+        services.AddTransient(typeof(IInterestRepository), typeof(InterestRepository));
+        services.AddTransient(typeof(IProjectRepository), typeof(ProjectRepository));
+        services.AddTransient(typeof(IReferenceRepository), typeof(ReferenceRepository));
+        services.AddTransient(typeof(ISkillRepository), typeof(SkillRepository));
+        services.AddTransient(typeof(IWorkExperienceRepository), typeof(WorkExperienceRepository));
+     
     }
 }

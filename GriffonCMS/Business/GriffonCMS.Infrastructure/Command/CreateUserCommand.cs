@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 using MediatR;
 
 namespace GriffonCMS.Infrastructure.Command;
-public class CreateCategoryCommand:IRequest<Guid>
+public class CreateUserCommand : IRequest<Guid>
 {
-    //public Guid BlogId { get; set; }
-    public String CategoryName { get; set; }
-} 
+    public Guid AdminId;
+}

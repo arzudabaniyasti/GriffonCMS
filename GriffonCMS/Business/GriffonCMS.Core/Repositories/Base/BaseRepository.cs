@@ -14,7 +14,7 @@ public class BaseRepository<TEntity, TPK> : IBaseRepository<TEntity, TPK>
     private readonly GriffonEFContext _dbContext;
     protected readonly DbSet<TEntity> _dbSet;
     #endregion
-
+    
     #region Methods
     public BaseRepository(GriffonEFContext dbContext)
     {
