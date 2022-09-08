@@ -1,5 +1,8 @@
 ﻿
 using GriffonCMS.Infrastructure.Command.Comments;
+using GriffonCMS.Infrastructure.Command.Users;
+using GriffonCMS.Infrastructure.Queries.Categories;
+using GriffonCMS.Infrastructure.Queries.Comments;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,7 +20,12 @@ public class CommentController : ControllerBase
         _mediator = mediator;
     }
     protected IMediator Mediator => _mediator ??= HttpContext.RequestServices.GetService<IMediator>();
-
+    [HttpGet]
+    public async Task<IActionResult> Get()
+    {
+        var query = new GetCommentQuery();
+        return Ok(await Mediator.Send(query));
+    }
     [HttpPost]
     public async Task<IActionResult> Post(CreateCommentCommand command)
     {
@@ -27,5 +35,15 @@ public class CommentController : ControllerBase
     public async Task<IActionResult> Delete(Guid id)
     {
         return Ok(await Mediator.Send(new DeleteCommentByIdCommand { Id = id }));
+    }
+    [HttpPut("{id}")]
+    //[Authorize]
+    public async Task<IActionResult> Put(Guid id, UpdateCommentCommand command)
+    {
+        if (id != command.Id)
+        {
+            return BadRequest();
+        }
+        return Ok(await Mediator.Send(command));
     }
 }

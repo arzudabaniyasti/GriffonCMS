@@ -1,5 +1,8 @@
 ﻿using GriffonCMS.Infrastructure.Command;
 using GriffonCMS.Infrastructure.Command.Abouts;
+using GriffonCMS.Infrastructure.Command.Users;
+using GriffonCMS.Infrastructure.Queries.Abouts;
+using GriffonCMS.Infrastructure.Queries.Categories;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,7 +19,12 @@ public class AboutController : ControllerBase
         _mediator = mediator;
     }
     protected IMediator Mediator => _mediator ??= HttpContext.RequestServices.GetService<IMediator>();
-
+    [HttpGet]
+    public async Task<IActionResult> Get()
+    {
+        var query = new GetAboutQuery();
+        return Ok(await Mediator.Send(query));
+    }
     [HttpPost]
     public async Task<IActionResult> Post(CreateAboutCommand command)
     {
@@ -26,5 +34,15 @@ public class AboutController : ControllerBase
     public async Task<IActionResult> Delete(Guid id)
     {
         return Ok(await Mediator.Send(new DeleteAboutByIdCommand { Id = id }));
+    }
+    [HttpPut("{id}")]
+    //[Authorize]
+    public async Task<IActionResult> Put(Guid id, UpdateAboutCommand command)
+    {
+        if (id != command.Id)
+        {
+            return BadRequest();
+        }
+        return Ok(await Mediator.Send(command));
     }
 }

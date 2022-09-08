@@ -9,7 +9,8 @@ using GriffonCMS.Domain.Entities.Category;
 using GriffonCMS.Domain.Entities.Tag;
 using GriffonCMS.Domain.Entities.User;
 using GriffonCMS.Infrastructure.Command.Users;
-
+using GriffonCMS.Infrastructure.DTOS.Users;
+using GriffonCMS.Infrastructure.Queries.Users;
 
 namespace GriffonCMS.Infrastructure.Maps.Users;
 public class UserMap : Profile
@@ -18,5 +19,8 @@ public class UserMap : Profile
     {
         //CreateMap<CategoryEntity, CreateCategoryCommand>().ReverseMap();
         CreateMap<UserEntity, DeleteUserByIdCommand>().ReverseMap();
+        CreateMap<UserEntity, UpdateUserCommand>().ReverseMap();
+        CreateMap<UserEntity, GetUserQuery>().ReverseMap();
+        CreateMap<UserEntity, GetUserDto>().ReverseMap();
     }
 }

@@ -9,7 +9,6 @@ using MediatR;
 namespace GriffonCMS.Infrastructure.Command.Blogs;
 public class CreateBlogCommand : IRequest<Guid>
 {
-    public Guid CategoryId { get; set; }
     public string Title { get; set; }
     public string Content { get; set; }
 }

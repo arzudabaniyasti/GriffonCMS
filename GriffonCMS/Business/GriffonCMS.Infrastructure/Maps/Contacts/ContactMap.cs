@@ -9,6 +9,8 @@ using GriffonCMS.Domain.Entities.Comments;
 using GriffonCMS.Domain.Entities.Contact;
 using GriffonCMS.Infrastructure.Command.Abouts;
 using GriffonCMS.Infrastructure.Command.Contacts;
+using GriffonCMS.Infrastructure.DTOS.Contacts;
+using GriffonCMS.Infrastructure.Queries.Contacts;
 
 namespace GriffonCMS.Infrastructure.Maps.Contacts;
 public class ContactMap : Profile
@@ -17,5 +19,9 @@ public class ContactMap : Profile
     {
         CreateMap<ContactEntity, CreateContactCommand>().ReverseMap();
         CreateMap<ContactEntity, DeleteContactByIdCommand>().ReverseMap();
+        CreateMap<ContactEntity, UpdateContactCommand>().ReverseMap();
+
+        CreateMap<ContactEntity, GetContactQuery>().ReverseMap();
+        CreateMap<ContactEntity, GetContactDto>().ReverseMap();
     }
 }

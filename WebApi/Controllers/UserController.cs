@@ -1,4 +1,5 @@
 ﻿using GriffonCMS.Infrastructure.Command.Users;
+using GriffonCMS.Infrastructure.Queries.Users;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,5 +22,22 @@ public class UserController : ControllerBase
     public async Task<IActionResult> Delete(Guid id)
     {
         return Ok(await Mediator.Send(new DeleteUserByIdCommand { Id = id }));
+    }
+    [HttpPut("{id}")]
+    //[Authorize]
+    public async Task<IActionResult> Put(Guid id, UpdateUserCommand command)
+    {
+        if (id != command.Id)
+        {
+            return BadRequest();
+        }
+        return Ok(await Mediator.Send(command));
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> Get()
+    {
+        var query = new GetUserQuery();
+        return Ok(await Mediator.Send(query));
     }
 }

@@ -1,5 +1,8 @@
 ﻿using GriffonCMS.Infrastructure.Command;
 using GriffonCMS.Infrastructure.Command.Blogs;
+using GriffonCMS.Infrastructure.Command.Categories;
+using GriffonCMS.Infrastructure.Command.Users;
+using GriffonCMS.Infrastructure.Queries.Blogs;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -29,4 +32,28 @@ public class BlogController : ControllerBase
     {
         return Ok(await Mediator.Send(new DeleteBlogByIdCommand { Id = id }));
     }
+
+    [HttpPost("AddCategoryToBlog")]
+    //        [Authorize]
+    public async Task<IActionResult> AddCategoryToBlog(AddCategoryToBlogCommand command)
+    {
+        return Ok(await Mediator.Send(command));
+    }
+    [HttpGet]
+    public async Task<IActionResult> Get()
+    {
+        var query = new GetBlogQuery();
+        return Ok(await Mediator.Send(query));
+    }
+    [HttpPut("{id}")]
+    //[Authorize]
+    public async Task<IActionResult> Put(Guid id, UpdateBlogCommand command)
+    {
+        if (id != command.Id)
+        {
+            return BadRequest();
+        }
+        return Ok(await Mediator.Send(command));
+    }
+
 }

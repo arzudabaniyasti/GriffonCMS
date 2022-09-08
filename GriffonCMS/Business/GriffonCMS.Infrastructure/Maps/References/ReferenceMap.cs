@@ -9,6 +9,8 @@ using GriffonCMS.Domain.Entities.Project;
 using GriffonCMS.Domain.Entities.Reference;
 using GriffonCMS.Infrastructure.Command.Abouts;
 using GriffonCMS.Infrastructure.Command.References;
+using GriffonCMS.Infrastructure.DTOS.References;
+using GriffonCMS.Infrastructure.Queries.References;
 
 namespace GriffonCMS.Infrastructure.Maps.References;
 public class ReferenceMap : Profile
@@ -17,5 +19,9 @@ public class ReferenceMap : Profile
     {
         CreateMap<ReferenceEntity, CreateReferenceCommand>().ReverseMap();
         CreateMap<ReferenceEntity, DeleteReferenceByIdCommand>().ReverseMap();
+        CreateMap<ReferenceEntity, UpdateReferenceCommand>().ReverseMap();
+
+        CreateMap<ReferenceEntity, GetReferenceQuery>().ReverseMap();
+        CreateMap<ReferenceEntity, GetReferenceDto>().ReverseMap();
     }
 }
