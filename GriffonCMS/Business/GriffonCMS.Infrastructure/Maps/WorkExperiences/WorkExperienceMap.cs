@@ -10,6 +10,8 @@ using GriffonCMS.Domain.Entities.WorkExperience;
 using GriffonCMS.Infrastructure.Command;
 using GriffonCMS.Infrastructure.Command.Abouts;
 using GriffonCMS.Infrastructure.Command.WorkExperiences;
+using GriffonCMS.Infrastructure.DTOS.WorkExperiences;
+using GriffonCMS.Infrastructure.Queries.WorkExperiences;
 
 namespace GriffonCMS.Infrastructure.Maps.WorkExperience;
 public class WorkExperienceMap : Profile
@@ -18,5 +20,9 @@ public class WorkExperienceMap : Profile
     {
         CreateMap<WorkExperienceEntity, CreateWorkExperienceCommand>().ReverseMap();
         CreateMap<WorkExperienceEntity, DeleteWorkExperienceByIdCommand>().ReverseMap();
+        CreateMap<WorkExperienceEntity, UpdateWorkExperienceCommand>().ReverseMap();
+
+        CreateMap<WorkExperienceEntity, GetWorkExperienceQuery>().ReverseMap();
+        CreateMap<WorkExperienceEntity, GetWorkExperienceDto>().ReverseMap();
     }
 }

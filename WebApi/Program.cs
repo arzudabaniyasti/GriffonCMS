@@ -15,6 +15,7 @@ using GriffonCMS.Application.Command.Skills;
 using GriffonCMS.Application.Command.Users;
 using GriffonCMS.Application.Command.WorkExperiences;
 using GriffonCMS.Core.Context.EFContext;
+using GriffonCMS.Infrastructure.Command.Users;
 using GriffonCMS.Infrastructure.Registrations;
 using GriffonCMS.Infrastructure.Utils.Security.Encryption;
 using GriffonCMS.Infrastructure.Utils.Security.Jwt;
@@ -26,6 +27,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+
+//CREATE
 builder.Services.AddMediatR(typeof(CreateCategoryCommandHandler).GetTypeInfo().Assembly);
 builder.Services.AddMediatR(typeof(CreateBlogCommandHandler).GetTypeInfo().Assembly);
 builder.Services.AddMediatR(typeof(CreateCommentCommandHandler).GetTypeInfo().Assembly);
@@ -38,6 +41,7 @@ builder.Services.AddMediatR(typeof(CreateUserCommandHandler).GetTypeInfo().Assem
 builder.Services.AddMediatR(typeof(CreateWorkExperienceCommandHandler).GetTypeInfo().Assembly);
 builder.Services.AddMediatR(typeof(CreateAboutCommandHandler).GetTypeInfo().Assembly);
 
+//DELETE
 builder.Services.AddMediatR(typeof(DeleteCategoryByIdCommandHandler).GetTypeInfo().Assembly);
 builder.Services.AddMediatR(typeof(DeleteBlogByIdCommandHandler).GetTypeInfo().Assembly);
 builder.Services.AddMediatR(typeof(DeleteCommentByIdCommandHandler).GetTypeInfo().Assembly);
@@ -48,7 +52,22 @@ builder.Services.AddMediatR(typeof(DeleteReferenceByIdCommandHandler).GetTypeInf
 builder.Services.AddMediatR(typeof(DeleteSkillByIdCommandHandler).GetTypeInfo().Assembly);
 builder.Services.AddMediatR(typeof(DeleteUserByIdCommandHandler).GetTypeInfo().Assembly);
 builder.Services.AddMediatR(typeof(DeleteWorkExperienceByIdCommandHandler).GetTypeInfo().Assembly);
-builder.Services.AddMediatR(typeof(DeleteAboutByIdCommandHandler).GetTypeInfo().Assembly);
+builder.Services.AddMediatR(typeof(DeleteAboutByIdCommandHandler).GetTypeInfo().Assembly); 
+
+//UPDATE
+builder.Services.AddMediatR(typeof(UpdateUserCommandHandler).GetTypeInfo().Assembly); 
+builder.Services.AddMediatR(typeof(UpdateAboutCommandHandler).GetTypeInfo().Assembly); 
+builder.Services.AddMediatR(typeof(UpdateBlogCommandHandler).GetTypeInfo().Assembly); 
+builder.Services.AddMediatR(typeof(UpdateCategoryCommandHandler).GetTypeInfo().Assembly); 
+builder.Services.AddMediatR(typeof(UpdateCommentCommandHandler).GetTypeInfo().Assembly); 
+builder.Services.AddMediatR(typeof(UpdateContactCommandHandler).GetTypeInfo().Assembly); 
+builder.Services.AddMediatR(typeof(UpdateInterestCommandHandler).GetTypeInfo().Assembly); 
+builder.Services.AddMediatR(typeof(UpdateProjectCommandHandler).GetTypeInfo().Assembly); 
+builder.Services.AddMediatR(typeof(UpdateReferenceCommandHandler).GetTypeInfo().Assembly); 
+builder.Services.AddMediatR(typeof(UpdateSkillCommandHandler).GetTypeInfo().Assembly); 
+builder.Services.AddMediatR(typeof(UpdateWorkExperienceCommandHandler).GetTypeInfo().Assembly);  
+
+builder.Services.AddMediatR(typeof(AddCategoryToBlogCommandHandler).GetTypeInfo().Assembly); 
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

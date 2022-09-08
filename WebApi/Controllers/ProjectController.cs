@@ -1,4 +1,7 @@
 ﻿using GriffonCMS.Infrastructure.Command.Projects;
+using GriffonCMS.Infrastructure.Command.Users;
+using GriffonCMS.Infrastructure.Queries.Categories;
+using GriffonCMS.Infrastructure.Queries.Projects;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,7 +19,12 @@ public class ProjectController : ControllerBase
         _mediator = mediator;
     }
     protected IMediator Mediator => _mediator ??= HttpContext.RequestServices.GetService<IMediator>();
-
+    [HttpGet]
+    public async Task<IActionResult> Get()
+    {
+        var query = new GetProjectQuery();
+        return Ok(await Mediator.Send(query));
+    }
     [HttpPost]
     public async Task<IActionResult> Post(CreateProjectCommand command)
     {
@@ -26,5 +34,15 @@ public class ProjectController : ControllerBase
     public async Task<IActionResult> Delete(Guid id)
     {
         return Ok(await Mediator.Send(new DeleteProjectByIdCommand { Id = id }));
+    }
+    [HttpPut("{id}")]
+    //[Authorize]
+    public async Task<IActionResult> Put(Guid id, UpdateProjectCommand command)
+    {
+        if (id != command.Id)
+        {
+            return BadRequest();
+        }
+        return Ok(await Mediator.Send(command));
     }
 }

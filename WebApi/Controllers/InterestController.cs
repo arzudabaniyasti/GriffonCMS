@@ -1,6 +1,9 @@
 ﻿
 using GriffonCMS.Infrastructure.Command.Contacts;
 using GriffonCMS.Infrastructure.Command.Interests;
+using GriffonCMS.Infrastructure.Command.Users;
+using GriffonCMS.Infrastructure.Queries.Categories;
+using GriffonCMS.Infrastructure.Queries.Interests;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,7 +22,12 @@ public class InterestController : ControllerBase
         _mediator = mediator;
     }
     protected IMediator Mediator => _mediator ??= HttpContext.RequestServices.GetService<IMediator>();
-
+    [HttpGet]
+    public async Task<IActionResult> Get()
+    {
+        var query = new GetInterestQuery();
+        return Ok(await Mediator.Send(query));
+    }
     [HttpPost]
     public async Task<IActionResult> Post(CreateInterestCommand command)
     {
@@ -29,5 +37,15 @@ public class InterestController : ControllerBase
     public async Task<IActionResult> Delete(Guid id)
     {
         return Ok(await Mediator.Send(new DeleteContactByIdCommand { Id = id }));
+    }
+    [HttpPut("{id}")]
+    //[Authorize]
+    public async Task<IActionResult> Put(Guid id, UpdateInterestCommand command)
+    {
+        if (id != command.Id)
+        {
+            return BadRequest();
+        }
+        return Ok(await Mediator.Send(command));
     }
 }
