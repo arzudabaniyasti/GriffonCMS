@@ -8,6 +8,5 @@ using GriffonCMS.Infrastructure.DTOS.Base;
 namespace GriffonCMS.Infrastructure.DTOS.Categories;
 public class GetCategoryDto : BaseDto<Guid>
 {
-    public int CategoryId { get; set; }
     public string CategoryName { get; set; }    
 }

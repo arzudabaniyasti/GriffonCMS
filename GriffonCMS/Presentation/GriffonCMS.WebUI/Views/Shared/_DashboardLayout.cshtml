@@ -177,12 +177,7 @@
                             <i class="mdi mdi-home menu-icon"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">
-                            <span class="menu-title">Websites</span>
-                            <i class="mdi mdi-home menu-icon"></i>
-                        </a>
-                    </li>
+                 
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                             <span class="menu-title">Add Information</span>
@@ -191,13 +186,13 @@
                         </a>
                         <div class="collapse" id="ui-basic">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Personal</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">About</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Interest</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Hobbies</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Skills</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Work Experience</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Reference</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="@Url.Action("Index","AdminPersonal", new { Area = "Admin" })">Personal</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="@Url.Action("Index","AdminAbout", new { Area = "Admin" })">About</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="@Url.Action("Index","AdminInterest", new { Area = "Admin" })">Interest</a></li>
+                     
+                                <li class="nav-item"> <a class="nav-link" href="@Url.Action("Index","AdminSkill", new { Area = "Admin" })">Skills</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="@Url.Action("Index","AdminWorkExperience", new { Area = "Admin" })">Work Experience</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="@Url.Action("Index","AdminReference", new { Area = "Admin" })">Reference</a></li>
                             </ul>
                         </div>
                     </li>

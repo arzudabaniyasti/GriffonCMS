@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Add Your Skill</h4>
+            <p class="card-description"> fill the informations </p>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label for="exampleInputName1">Skill</label>
+                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Skill" name="SkillName">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputCity1">Skill Level</label>
+                    <input type="text" class="form-control" id="exampleInputCity1" placeholder="Level" name="SkillLevel">
+                </div>
+
+                <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
+                <button class="btn btn-light">Cancel</button>
+
+            </form>
+        </div>
+    </div>
+</div>
