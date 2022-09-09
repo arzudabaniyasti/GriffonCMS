@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Add Your Work Experience</h4>
+            <p class="card-description"> fill the informations </p>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label for="exampleInputName1">Start Date</label>
+                    <input type="date" class="form-control" id="exampleInputName1" placeholder="Start Date" name="Start Date">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputCity1">End Date</label>
+                    <input type="date" class="form-control" id="exampleInputCity1" placeholder="End Date" name="End Date">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputCity1">Role</label>
+                    <input type="text" class="form-control" id="exampleInputCity1" placeholder="Role" name="Role">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputCity1">Company</label>
+                    <input type="text" class="form-control" id="exampleInputCity1" placeholder="Company" name="Company">
+                </div>
+                <div class="form-group">
+                    <label for="exampleTextarea1">Description</label>
+                    <textarea class="form-control" id="exampleTextarea1" rows="4" name="Description"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
+                <button class="btn btn-light">Cancel</button>
+
+            </form>
+        </div>
+    </div>
+</div>
