@@ -4,11 +4,14 @@ using GriffonCMS.Infrastructure.Command.Users;
 using GriffonCMS.Infrastructure.Queries.Abouts;
 using GriffonCMS.Infrastructure.Queries.Categories;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers;
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
+
 public class AboutController : ControllerBase
 {
     private IMediator _mediator;

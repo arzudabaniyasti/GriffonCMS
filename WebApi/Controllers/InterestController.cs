@@ -5,6 +5,7 @@ using GriffonCMS.Infrastructure.Command.Users;
 using GriffonCMS.Infrastructure.Queries.Categories;
 using GriffonCMS.Infrastructure.Queries.Interests;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers;
@@ -12,6 +13,8 @@ namespace WebApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
+
 public class InterestController : ControllerBase
 {
     private IMediator _mediator;
