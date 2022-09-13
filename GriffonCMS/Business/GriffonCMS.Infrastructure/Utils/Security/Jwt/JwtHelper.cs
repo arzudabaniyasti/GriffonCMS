@@ -46,18 +46,16 @@ public class JwtHelper : ITokenHelper
             audience: tokenOptions.Audience,
             expires: _accessTokenExpirations,
             notBefore: DateTime.Now,
-            signingCredentials: signingCredentials
+            claims: new[]
+                {
+                    new Claim(System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Iat,DateTime.UtcNow.ToString()),
+                    new Claim("Id",admin.Id.ToString()),
+                    new Claim("FullName",admin.FullName),
+                    new Claim("Password",admin.Password)
+                },
+        signingCredentials: signingCredentials
         );
         return jwt;
-    }
-    private IEnumerable<Claim> SetClaims(AdminEntity admin)
-    {
-        var claims = new List<Claim>();
-        claims.AddNameIdentifier(admin.Id.ToString());
-        claims.AddEmail(admin.EMail);
-        claims.AddName(admin.FullName);
-        //role ekleyebilirsin 
-        return claims;
     }
 
 }

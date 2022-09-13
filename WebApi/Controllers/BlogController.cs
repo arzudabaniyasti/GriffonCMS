@@ -4,12 +4,15 @@ using GriffonCMS.Infrastructure.Command.Categories;
 using GriffonCMS.Infrastructure.Command.Users;
 using GriffonCMS.Infrastructure.Queries.Blogs;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
+
 public class BlogController : ControllerBase
 {
 
